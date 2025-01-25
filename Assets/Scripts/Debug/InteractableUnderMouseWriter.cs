@@ -1,6 +1,6 @@
 ﻿using System;
 using Bubbles;
-using Bubbles.Input;
+using Bubbles.InteractableInput;
 using TMPro;
 using UnityEngine;
 
@@ -9,6 +9,7 @@ namespace DebugGraphics
     public class InteractableUnderMouseWriter : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _textField;
+        [SerializeField] private TextMeshProUGUI _textFieldP;
         [SerializeField] private PickupDragHandler _mouseDragHandler;
 
         private void Update()
@@ -21,6 +22,16 @@ namespace DebugGraphics
             else
             {
                 _textField.text = $"Under Mouse: {underMouse.gameObject.name}";
+            }
+
+            Pickup pickup = _mouseDragHandler.PickupUnderMouse;
+            if (pickup == null)
+            {
+                _textFieldP.text = "Under Mouse: None";
+            }
+            else
+            {
+                _textFieldP.text = $"Under Mouse: {pickup.Item.name}";
             }
         }
     }
