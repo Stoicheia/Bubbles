@@ -1,4 +1,5 @@
 ﻿using System;
+using Bubbles.GamePanels;
 using Bubbles.InteractableInput;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
@@ -10,7 +11,7 @@ namespace Bubbles.Graphics
     {
         [SerializeField] private Canvas _canvas;
         [SerializeField] private Image _imageField;
-        [SerializeField] private PickupDragHandler _pickupDragHandler;
+        [SerializeField] private DragInteractionHandler _pickupDragHandler;
 
         private RectTransform _imgTransform;
         private Vector2 _lastDragOffset;
@@ -32,10 +33,10 @@ namespace Bubbles.Graphics
             ImageFollowMouse(_lastDragOffset);
         }
         
-        public void Display(ItemAsset item)
+        public void Display(Sprite sprite)
         {
             _imageField.enabled = true;
-            _imageField.sprite = item.SpriteInTransit;
+            _imageField.sprite = sprite;
         }
 
         public void Disable()
@@ -43,13 +44,13 @@ namespace Bubbles.Graphics
             _imageField.enabled = false;
         }
         
-        private void HandleStartPickup(Pickup pickup, Vector2 offset)
+        private void HandleStartPickup(PanelPickup panelPickup, Vector2 offset)
         {
-            Display(pickup.Item);
+            Display(panelPickup.SpriteInTransit);
             _lastDragOffset = offset;
         }
         
-        private void HandleEndPickup(Pickup pickup)
+        private void HandleEndPickup(PanelPickup panelPickup)
         {
             Disable();
         }

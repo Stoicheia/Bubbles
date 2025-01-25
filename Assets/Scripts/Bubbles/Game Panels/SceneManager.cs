@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Bubbles.GamePanels
 {
@@ -9,10 +12,20 @@ namespace Bubbles.GamePanels
     {
         public event Action<SceneInteraction> OnFailInteraction;
         public event Action<SceneInteraction, GameScene> OnTransitionFromInteraction;
-        
+        public GameScene ActiveScene => _activeScenePrefab;
+
+        [OdinSerialize] private Dictionary<SlotID, PanelField> _panelFields;
         [SerializeField] private RectTransform _sceneRoot;
-        [SerializeField] [ReadOnly] private GameScene _activeScene;
+        [SerializeField] [ReadOnly] private GameScene _activeScenePrefab;
         [SerializeField] [ReadOnly] private bool _isLocked;
+
+        private void Awake()
+        {
+            foreach (var kvp in _panelFields)
+            {
+                kvp.Value.ID = kvp.Key;
+            }
+        }
 
         public void LoadScene(GameScene scene)
         {
@@ -22,34 +35,49 @@ namespace Bubbles.GamePanels
         [Button(ButtonSizes.Large)]
         public void LoadSceneInstantly(GameScene scene)
         {
-            if (_activeScene != null)
+            if (_activeScenePrefab != null)
             {
-                Destroy(_activeScene.gameObject);
+                Destroy(_activeScenePrefab.gameObject);
             }
-            
-            GameScene sceneInstance = Instantiate(scene, _sceneRoot);
-            _activeScene = sceneInstance;
+
+            Dictionary<SlotID, Panel> newScenePanels = scene.PanelPrefabs;
+            foreach (var kvp in _panelFields)
+            {
+                SlotID id = kvp.Key;
+                PanelField existingPanelField = kvp.Value;
+
+                if (newScenePanels.ContainsKey(id))
+                {
+                    existingPanelField.LoadInstantly(newScenePanels[id]);
+                }
+                else
+                {
+                    existingPanelField.UnloadInstantly();
+                }
+            }
+
+            _activeScenePrefab = scene;
         }
 
         public bool TryInteraction(SceneInteraction interaction)
         {
-            if (_activeScene == null)
+            if (_activeScenePrefab == null)
             {
                 Debug.LogError("Attempted an interaction while no active scene was detected.");
                 return false;
             }
 
-            bool hasInteraction = _activeScene.IsValidInteraction(interaction);
+            bool hasInteraction = _activeScenePrefab.IsValidInteraction(interaction);
             if (!hasInteraction)
             {
                 OnFailInteraction?.Invoke(interaction);
                 return false;
             }
 
-            GameScene toScene = _activeScene.GetNextScene(interaction);
+            GameScene toScene = _activeScenePrefab.GetNextScene(interaction);
             LoadScene(toScene);
             
-            OnTransitionFromInteraction?.Invoke(interaction, _activeScene);
+            OnTransitionFromInteraction?.Invoke(interaction, _activeScenePrefab);
             return true;
         }
 
