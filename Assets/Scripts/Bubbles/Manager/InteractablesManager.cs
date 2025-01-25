@@ -14,5 +14,7 @@ namespace Bubbles.Manager
             List<Interactable> active = AllInteractables.Where(x => x.IsActive).ToList();
             return active;
         }
+        
+        
     }
 }

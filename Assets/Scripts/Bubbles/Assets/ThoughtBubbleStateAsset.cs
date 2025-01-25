@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Bubbles.Manager;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -12,5 +14,13 @@ namespace Bubbles
         [field: SerializeField] public ThoughtBubbleStateScene Scene { get; private set; }
         [field: OdinSerialize] public Dictionary<ItemAsset, ThoughtBubbleStateAsset> TransitionsByAddItem { get; private set; }
         [field: OdinSerialize] public Dictionary<ItemAsset, ThoughtBubbleStateAsset> TransitionsByRemoveItem { get; private set; }
+        [field: OdinSerialize] public Dictionary<ReactionInput, ThoughtBubbleStateAsset> TransitionsByReaction { get; private set; }
+    }
+
+    [Serializable]
+    public struct ReactionInput
+    {
+        public InteractableSlot Slot;
+        public ItemAsset Item;
     }
 }
