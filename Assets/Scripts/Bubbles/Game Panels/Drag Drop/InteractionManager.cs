@@ -13,6 +13,9 @@ namespace Bubbles.InteractableInput
         [SerializeField] private DragInteractionHandler _dragHandler;
         [FormerlySerializedAs("_sceneManager")] [SerializeField] private GameSceneManager _gameSceneManager;
         private Panel _panelUnderMouse;
+        [Header("Debug")] 
+        [SerializeField] private bool _showValidInteractions;
+        [SerializeField] private bool _showInvalidInteractions;
 
         private void OnEnable()
         {
@@ -42,7 +45,19 @@ namespace Bubbles.InteractableInput
                 if (detectedUnderMouse != null)
                 {
                     bool canInteract = _gameSceneManager.CanInteract(currentlyDragging, detectedUnderMouse);
-                    HighlightState toState = canInteract ? HighlightState.HoverYes : HighlightState.HoverNo;
+                    HighlightState toState;
+                    if (canInteract)
+                    {
+                        toState = HighlightState.HoverYes;
+                    }
+                    else if (currentlyDragging.ParentID == detectedUnderMouse.ID)
+                    {
+                        toState = HighlightState.Disabled;
+                    }
+                    else
+                    {
+                        toState = _showInvalidInteractions ? HighlightState.HoverNo : HighlightState.Disabled;
+                    }
                     detectedUnderMouse.SetHighlight(toState);
                 }
 
@@ -75,10 +90,13 @@ namespace Bubbles.InteractableInput
 
         private void HandlePickup(PanelPickup pickup, Vector2 _)
         {
-            List<Panel> interactable = GetInteractablePanels(pickup);
-            foreach (Panel p in interactable)
+            if (_showValidInteractions)
             {
-                p.SetHighlight(HighlightState.CanInteract);
+                List<Panel> interactable = GetInteractablePanels(pickup);
+                foreach (Panel p in interactable)
+                {
+                    p.SetHighlight(HighlightState.CanInteract);
+                }
             }
         }
         

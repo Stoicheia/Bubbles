@@ -155,6 +155,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  <IntensityTransitionSeconds>k__BackingField: 0.2
-  <PulsateAmplitude>k__BackingField: 0.008
+  <IntensityTransitionSeconds>k__BackingField: 0.12
+  <PulsateAmplitude>k__BackingField: 0.05
   <PulsateFrequency>k__BackingField: 2.5

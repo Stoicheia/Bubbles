@@ -21,6 +21,12 @@ namespace Bubbles.GamePanels
         private PickupState _state;
         private Vector2 _dragStartPos;
         private Canvas _myCanvas;
+        public RectTransform Rect { get; private set; }
+
+        private void Awake()
+        {
+            Rect = GetComponent<RectTransform>();
+        }
 
         private void Start()
         {

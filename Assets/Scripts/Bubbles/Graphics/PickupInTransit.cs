@@ -9,6 +9,9 @@ namespace Bubbles.Graphics
 {
     public class PickupInTransit : MonoBehaviour
     {
+        public RectTransform Rect => _imgTransform;
+        public bool HasPickup => _imageField.enabled;
+        
         [SerializeField] private Canvas _canvas;
         [SerializeField] private Image _imageField;
         [SerializeField] private DragInteractionHandler _pickupDragHandler;
@@ -63,13 +66,14 @@ namespace Bubbles.Graphics
             Vector2 mousePosition;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 _canvas.transform as RectTransform, // The RectTransform of the Canvas
-                Input.mousePosition + offset3,               // The current mouse position
+                Input.mousePosition - offset3,               // The current mouse position
                 _canvas.worldCamera,                // Camera rendering the Canvas (null if Overlay)
                 out mousePosition                  // The converted local position
             );
 
             // Set the position of the UI Image
             _imgTransform.anchoredPosition = mousePosition;
+            Debug.Log(offset3);
         }
         
 

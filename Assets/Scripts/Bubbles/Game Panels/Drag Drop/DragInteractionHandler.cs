@@ -1,5 +1,6 @@
 ﻿using System;
 using Bubbles.GamePanels;
+using Bubbles.Graphics;
 using UnityEngine;
 using Utility;
 
@@ -13,6 +14,8 @@ namespace Bubbles.InteractableInput
         public Panel PanelUnderMouse { get; private set; }
         public PanelPickup PickupUnderMouse { get; private set; }
         public PanelPickup CurrentlyDragging { get; private set; }
+        [SerializeField] private Canvas _canvas;
+        [SerializeField] private PickupInTransit _transitor;
 
         private void OnEnable()
         {
@@ -29,7 +32,8 @@ namespace Bubbles.InteractableInput
         
         private void Update()
         {
-            var interactableDetected = CanvasUtility.DetectUnderCursor<Panel>();
+            var interactableDetected = !_transitor.HasPickup ? CanvasUtility.DetectUnderCursor<Panel>()
+                    : CanvasUtility.DetectUnderRect<Panel>(_transitor.Rect, _canvas);
             var pickupDetected = CanvasUtility.DetectUnderCursor<PanelPickup>();
             
             if (pickupDetected != PickupUnderMouse)

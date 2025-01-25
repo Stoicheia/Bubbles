@@ -230,6 +230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dragHandler: {fileID: 246094496}
   _gameSceneManager: {fileID: 917386858}
+  _showValidInteractions: 1
+  _showInvalidInteractions: 1
 --- !u!114 &246094496
 MonoBehaviour:
   m_ObjectHideFlags: 0
