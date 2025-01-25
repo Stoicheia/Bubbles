@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 using System.IO;
 public class SaveManager : MonoBehaviour
 {
-    private static SaveManager Instance;
+    public static SaveManager Instance;
 
     public bool[] Endings = new bool[35];
 
