@@ -14,6 +14,8 @@ namespace Bubbles.GamePanels
         
         [OdinSerialize] private Dictionary<SlotID, Panel> _panels;
         [OdinSerialize] private List<SceneTransition> _transitions;
+        [field: SerializeField] public bool IsEndingScene { get; private set; }
+        [field: SerializeField] [field: ShowIf("IsEndingScene")] public Endings Ending { get; private set; }
         
         private Dictionary<SceneInteraction, GameScene> _sceneByInteraction;
 

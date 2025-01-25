@@ -230,8 +230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dragHandler: {fileID: 246094496}
   _gameSceneManager: {fileID: 917386858}
-  _showValidInteractions: 1
-  _showInvalidInteractions: 1
+  _showValidInteractions: 0
+  _showInvalidInteractions: 0
 --- !u!114 &246094496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db47ba3cb0ba472089aaad2814642a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvas: {fileID: 1808748193}
+  _transitor: {fileID: 2108080429}
 --- !u!4 &246094497
 Transform:
   m_ObjectHideFlags: 0

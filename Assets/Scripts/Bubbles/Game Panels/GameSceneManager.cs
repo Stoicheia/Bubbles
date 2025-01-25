@@ -12,7 +12,12 @@ namespace Bubbles.GamePanels
     {
         public event Action<SceneInteraction> OnFailInteraction;
         public event Action<SceneInteraction, GameScene> OnTransitionFromInteraction;
-        public GameScene ActiveScene => _activeScenePrefab;
+        public GameScene ActiveScene
+        {
+            get => _activeScenePrefab;
+            set => _activeScenePrefab = value;
+        }
+        public Dictionary<SlotID, PanelField> PanelFields => _panelFields;
 
         [OdinSerialize] private Dictionary<SlotID, PanelField> _panelFields;
         [SerializeField] private RectTransform _sceneRoot;
@@ -60,6 +65,34 @@ namespace Bubbles.GamePanels
             }
 
             _activeScenePrefab = scene;
+            if (scene.IsEndingScene)
+            {
+                Debug.Log($"Ending {scene.Ending.number} reached.");
+            }
+        }
+
+        [Button]
+        public PanelField LoadScenePanel(GameScene toScene, SlotID idToLoad)
+        {
+            PanelField toField = PanelFields[idToLoad];
+            Panel panelPrefab = toScene.PanelPrefabs[toField.ID];
+            
+            toField.LoadInstantly(panelPrefab);
+            return toField;
+        }
+
+        public void SetLock(bool on)
+        {
+            _isLocked = on;
+        }
+
+        public void SetActiveScene(GameScene scene)
+        {
+            ActiveScene = scene;
+            if (scene.IsEndingScene)
+            {
+                Debug.Log($"Ending {scene.Ending.number} reached.");
+            }
         }
 
         public bool TryInteraction(SceneInteraction interaction)
