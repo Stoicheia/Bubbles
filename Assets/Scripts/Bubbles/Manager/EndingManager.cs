@@ -8,10 +8,12 @@ public class EndingManager : MonoBehaviour
     {
         foreach (GameObject obj in EndingsBtns)
         {
+
             Endings endings = obj.GetComponent<Endings>();
             if (endings != null)
             {
                 endings.active = !endings.active;
+                obj.SetActive(endings.active);
             }
         }
     }
