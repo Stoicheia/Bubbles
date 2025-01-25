@@ -12,6 +12,7 @@ namespace Bubbles.Manager
     {
         [field: SerializeField][field: ReadOnly] public List<Interactable> AllInteractables { get; private set; }
         [SerializeField] private PickupDragHandler _dragHandler;
+        [SerializeField] [ReadOnly] private Interactable _interactableUnderMouse;
 
         private void Awake()
         {
@@ -24,6 +25,35 @@ namespace Bubbles.Manager
             _dragHandler.OnEndPickup += HandleReleasePickup;
         }
         
+        private void OnDisable()
+        {
+            _dragHandler.OnStartPickup -= HandleStartPickup;
+            _dragHandler.OnEndPickup -= HandleReleasePickup;
+        }
+
+        private void Update()
+        {
+            HandleDragOnInteractableHover();
+        }
+
+        private void HandleDragOnInteractableHover()
+        {
+            if (_dragHandler.CurrentlyDragging == null) return;
+            Interactable detectedUnderMouse = _dragHandler.InteractableUnderMouse;
+            if (detectedUnderMouse != _interactableUnderMouse)
+            {
+                if (detectedUnderMouse != null)
+                {
+                    if(detectedUnderMouse.CanInteract()) // TODO
+                }
+
+                if (_interactableUnderMouse != null)
+                {
+                    
+                }
+            }
+        }
+
         public IEnumerable<Interactable> GetActiveInteractables()
         {
             IEnumerable<Interactable> active = AllInteractables.Where(x => x.IsActive);
