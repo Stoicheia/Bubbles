@@ -21,12 +21,10 @@ namespace Utility
                 var obj = result.gameObject.GetComponent<T>();
                 if (obj != null)
                 {
-                    Debug.Log($"Image detected: {result.gameObject.name}");
                     return obj;
                 }
             }
 
-            Debug.Log("No image detected under the cursor.");
             return null;
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
@@ -9,7 +10,7 @@ using UnityEngine.UI;
 namespace Bubbles
 {
     // Prefab that goes into ThoughtBubbleStateAsset
-    public class ThoughtBubbleStateScene : SerializedMonoBehaviour
+    public class ThoughtBubbleStateScene : MonoBehaviour
     {
         [SerializeField] private List<Pickup> _pickupFields;
         [field: SerializeField] public Image ImageToHighlight { get; private set; }
@@ -29,6 +30,11 @@ namespace Bubbles
                 default:
                     throw new ArgumentOutOfRangeException(nameof(state), state, null);
             }
+        }
+
+        public List<ItemAsset> GetItemsInScene()
+        {
+            return _pickupFields.Select(x => x.Item).ToList();
         }
     }
 

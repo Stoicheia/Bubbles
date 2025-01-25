@@ -8,6 +8,8 @@ namespace Bubbles
 {
     public class ThoughtBubble : Interactable
     {
+        [SerializeField] private RectTransform _sceneRoot;
+        [SerializeField] private RectTransform _scenePrefab;
         [field: SerializeField] public ThoughtBubbleStateAsset State { get; private set; }
 
         public override List<ItemAsset> GetReceivableItems()
@@ -19,7 +21,15 @@ namespace Bubbles
         {
             return State.Scene.ImageToHighlight;
         }
-
+        
+        [Button(ButtonSizes.Large)]
+        public void RenderCurrentStateInstantly()
+        {
+            Destroy(_scenePrefab.gameObject);
+            _scenePrefab = Instantiate(State.Scene, _sceneRoot).GetComponent<RectTransform>();
+        }
+        
+        [Button]
         public void SetHighlight(HighlightState state)
         {
             State.Scene.SetHighlight(state);

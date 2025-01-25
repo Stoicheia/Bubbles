@@ -15,6 +15,17 @@ namespace Bubbles
         [field: OdinSerialize] public Dictionary<ItemAsset, ThoughtBubbleStateAsset> TransitionsByAddItem { get; private set; }
         [field: OdinSerialize] public Dictionary<ItemAsset, ThoughtBubbleStateAsset> TransitionsByRemoveItem { get; private set; }
         [field: OdinSerialize] public Dictionary<ReactionInput, ThoughtBubbleStateAsset> TransitionsByReaction { get; private set; }
+        [ReadOnly] [SerializeField] private List<ItemAsset> _itemsInScene;
+
+        private void OnValidate()
+        {
+            if (Scene == null) return;
+            _itemsInScene = Scene.GetItemsInScene();
+            foreach (ItemAsset item in _itemsInScene)
+            {
+                TransitionsByRemoveItem.TryAdd(item, null);
+            }
+        }
     }
 
     [Serializable]

@@ -35,4 +35,10 @@ namespace Bubbles
             
         }
     }
+
+    [Serializable]
+    public enum PickupState
+    {
+        Absent, AtRest, Hover, Click
+    }
 }
