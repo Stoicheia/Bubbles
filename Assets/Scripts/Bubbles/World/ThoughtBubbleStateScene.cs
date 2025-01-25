@@ -32,6 +32,11 @@ namespace Bubbles
             }
         }
 
+        public List<Pickup> GetPickupsInScene()
+        {
+            return _pickupFields;
+        }
+
         public List<ItemAsset> GetItemsInScene()
         {
             return _pickupFields.Select(x => x.Item).ToList();

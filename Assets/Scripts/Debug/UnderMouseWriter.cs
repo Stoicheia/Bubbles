@@ -1,5 +1,6 @@
 ﻿using System;
 using Bubbles;
+using Bubbles.GamePanels;
 using Bubbles.InteractableInput;
 using TMPro;
 using UnityEngine;
@@ -10,11 +11,11 @@ namespace DebugGraphics
     {
         [SerializeField] private TextMeshProUGUI _textField;
         [SerializeField] private TextMeshProUGUI _textFieldP;
-        [SerializeField] private PickupDragHandler _mouseDragHandler;
+        [SerializeField] private DragInteractionHandler _mouseDragHandler;
 
         private void Update()
         {
-            Interactable underMouse = _mouseDragHandler.InteractableUnderMouse;
+            Panel underMouse = _mouseDragHandler.PanelUnderMouse;
             if (underMouse == null)
             {
                 _textField.text = "Interactable: None";
@@ -24,14 +25,14 @@ namespace DebugGraphics
                 _textField.text = $"Interactable: {underMouse.gameObject.name}";
             }
 
-            Pickup pickup = _mouseDragHandler.PickupUnderMouse;
+            PanelPickup pickup = _mouseDragHandler.PickupUnderMouse;
             if (pickup == null)
             {
                 _textFieldP.text = "Pickup: None";
             }
             else
             {
-                _textFieldP.text = $"Pickup: {pickup.Item.name}";
+                _textFieldP.text = $"Pickup: {pickup.ParentID}";
             }
         }
     }

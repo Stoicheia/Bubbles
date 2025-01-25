@@ -18,10 +18,17 @@ namespace Bubbles
             _sceneObject = GetComponentInChildren<ThoughtBubbleStateScene>().GetComponent<RectTransform>();
             if (State != null)
             {
-                RenderCurrentStateInstantly();
+                ChangeState(State);
             }
         }
-        
+
+        private void ChangeState(ThoughtBubbleStateAsset newState)
+        {
+            State = newState;
+            ThoughtBubbleStateScene sceneInstance = RenderCurrentStateInstantly();
+            sceneInstance.GetPickupsInScene().ForEach(x => x.ParentInteractable = this);
+        }
+
         public override bool Interact(ItemAsset item)
         {
             if (!CanInteract(item))
@@ -29,13 +36,32 @@ namespace Bubbles
                 return false;
             }
             ThoughtBubbleStateAsset toState = State.TransitionsByAddItem[item];
-            State = toState;
-            RenderCurrentStateInstantly();
+            ChangeState(toState);
             
             return true;
         }
 
-        public override List<ItemAsset> GetReceivableItems()
+        public override bool RemoveChildPickup(Pickup pickup)
+        {
+            if (pickup.ParentInteractable != this) return false;
+            ItemAsset item = pickup.Item;
+            Dictionary<ItemAsset, ThoughtBubbleStateAsset> removes = State.TransitionsByRemoveItem;
+            if (!removes.ContainsKey(item))
+            {
+                Debug.LogError($"Interactable ({name}) does not contain transition out of its own pickup removal ({item.name}).");
+                return false;
+            }
+            ThoughtBubbleStateAsset newState = State.TransitionsByRemoveItem[item];
+            ChangeState(newState);
+            return true;
+        }
+
+        public override bool CanInteract(ItemAsset item)
+        {
+            return GetReceivableItems().Contains(item);
+        }
+
+        public List<ItemAsset> GetReceivableItems()
         {
             return State.TransitionsByAddItem.Keys.ToList();
         }
@@ -46,11 +72,13 @@ namespace Bubbles
         }
 
         [Button(ButtonSizes.Large)]
-        public void RenderCurrentStateInstantly()
+        public ThoughtBubbleStateScene RenderCurrentStateInstantly()
         {
             if(_sceneObject != null)
                 Destroy(_sceneObject.gameObject);
-            _sceneObject = Instantiate(State.Scene, _sceneRoot).GetComponent<RectTransform>();
+            ThoughtBubbleStateScene sceneInstance = Instantiate(State.Scene, _sceneRoot);
+            _sceneObject = sceneInstance.GetComponent<RectTransform>();
+            return sceneInstance;
         }
         
         [Button]

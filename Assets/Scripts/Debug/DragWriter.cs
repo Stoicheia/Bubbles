@@ -8,7 +8,7 @@ namespace DebugGraphics
 {
     public class DragWriter : MonoBehaviour
     {
-        [SerializeField] private PickupDragHandler _dragHandler;
+        [SerializeField] private DragInteractionHandler _dragHandler;
         [SerializeField] private TextMeshProUGUI _draggingField;
 
         private void Update()
@@ -21,7 +21,7 @@ namespace DebugGraphics
             }
             else
             {
-                _draggingField.text = $"Dragging: {dragging.Item.name}";
+                _draggingField.text = $"Dragging: {dragging.ParentID}";
             }
         }
     }

@@ -5,17 +5,16 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Bubbles
+namespace Bubbles.GamePanels
 {
-    [RequireComponent(typeof(Image))] // For raycasting purposes only. Set alpha to 0.
-    public class Pickup : MonoBehaviour, IMouseInteractor
+    public class PanelPickup : SerializedMonoBehaviour, IMouseInteractor
     {
-        public static event Action<Pickup, Vector2> OnPickup;
-        public static event Action<Pickup> OnRelease;
+        public static event Action<PanelPickup, Vector2> OnPickup;
+        public static event Action<PanelPickup> OnRelease;
         public event Action OnHover;
         public event Action OnClick;
-        [field: SerializeField] public ItemAsset Item { get; private set; }
-        [field: SerializeField][field: ReadOnly] public Interactable ParentInteractable { get; set; }
+        [field: SerializeField][field: ReadOnly] public Panel ParentPanel { get; set; }
+        public SlotID ParentID => ParentPanel.ID;
         [SerializeField] private PickupGraphics _graphics;
         private PickupState _state;
         private Vector2 _dragStartPos;
@@ -50,7 +49,7 @@ namespace Bubbles
 
         public void OnDrag()
         {
-            Debug.Log($"Dragging pickup: {Item.name}");
+            Debug.Log($"Dragging pickup from slot: {ParentID.ToString()}");
         }
 
         public void BeginDrag()
@@ -96,11 +95,5 @@ namespace Bubbles
         {
             return _state != PickupState.Dragging;
         }
-    }
-
-    [Serializable]
-    public enum PickupState
-    {
-        Dragging, AtRest, Hover, Click
     }
 }

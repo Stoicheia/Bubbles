@@ -13,19 +13,15 @@ namespace Bubbles
     {
         [field: SerializeField] public InteractableSlot InteractableSlot { get; private set; }
         [field: SerializeField] public bool IsActive { get; private set; }
-        public abstract List<ItemAsset> GetReceivableItems();
         public abstract Image GetImageToHighlight();
         bool IMouseInteractor.IsActive()
         {
             return IsActive;
         }
 
-        public bool CanInteract(ItemAsset item)
-        {
-            var receivable = GetReceivableItems();
-            return receivable.Contains(item);
-        }
+        public abstract bool CanInteract(ItemAsset item);
         public abstract bool Interact(ItemAsset item);
+        public abstract bool RemoveChildPickup(Pickup pickup);
 
         public InteractableHighlight GetHighlighter()
         {

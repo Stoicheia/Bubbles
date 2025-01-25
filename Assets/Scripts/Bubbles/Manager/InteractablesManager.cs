@@ -105,6 +105,9 @@ namespace Bubbles.Manager
             {
                 underMouse.Interact(item);
             }
+
+            Interactable removedFrom = pickup.ParentInteractable;
+            removedFrom.RemoveChildPickup(pickup);
         }
     }
 }
