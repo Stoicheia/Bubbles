@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Bubbles.Graphics.Transitions;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -23,6 +24,7 @@ namespace Bubbles.GamePanels
         [SerializeField] private RectTransform _sceneRoot;
         [SerializeField] [ReadOnly] private GameScene _activeScenePrefab;
         [SerializeField] [ReadOnly] private bool _isLocked;
+        [SerializeField] private GameSceneTransitionAnims _anims;
 
         [Header("Debug")]
         [SerializeField] private GameScene _loadOnStart;
@@ -37,12 +39,12 @@ namespace Bubbles.GamePanels
 
         private void Start()
         {
-            LoadScene(_loadOnStart);
+            LoadSceneInstantly(_loadOnStart);
         }
 
-        public void LoadScene(GameScene scene)
+        public void LoadSceneWithAnimation(SceneInteraction fromInteraction, GameScene scene)
         {
-            StartCoroutine(SceneTransitionSequence(scene));
+            _anims.TransitionTo(fromInteraction, scene);
         }
 
         [Button(ButtonSizes.Large)]
@@ -103,6 +105,12 @@ namespace Bubbles.GamePanels
                 return false;
             }
 
+            if (_isLocked)
+            {
+                Debug.LogError("Cannot attempt transition while locked.");
+                return false;
+            }
+
             bool hasInteraction = _activeScenePrefab.IsValidInteraction(interaction);
             if (!hasInteraction)
             {
@@ -111,7 +119,7 @@ namespace Bubbles.GamePanels
             }
 
             GameScene toScene = _activeScenePrefab.GetNextScene(interaction);
-            LoadScene(toScene);
+            LoadSceneWithAnimation(interaction, toScene);
             
             OnTransitionFromInteraction?.Invoke(interaction, _activeScenePrefab);
             return true;

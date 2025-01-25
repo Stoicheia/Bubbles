@@ -11,8 +11,10 @@ namespace Bubbles.Graphics.Transitions
 {
     public class GameSceneTransitionAnims : SerializedMonoBehaviour
     {
-        [OdinSerialize] private Dictionary<SlotID, PanelField> _panelFields;
+        [OdinSerialize][ReadOnly] private Dictionary<SlotID, PanelField> _panelFields;
         [SerializeField] private GameSceneManager _sceneManager;
+        [Header("Settings")]
+        [SerializeField] private float _gapBetweenPopsSecs;
 
         private void Start()
         {
@@ -22,7 +24,7 @@ namespace Bubbles.Graphics.Transitions
         [Button]
         public void TransitionTo(SceneInteraction fromInteraction, GameScene toScene)
         {
-            
+            StartCoroutine(ChainTransition(fromInteraction, toScene));
         }
         
         private readonly List<SlotID> _naturalOrder = 
@@ -41,10 +43,7 @@ namespace Bubbles.Graphics.Transitions
                 anim.DisappearImmediately();
                 seqs.Add(StartCoroutine(anim.TransitionInSeq()));
             }
-            foreach (Coroutine anim in seqs)
-            {
-                yield return anim;
-            }
+            yield return new WaitForSeconds(_gapBetweenPopsSecs);
 
             foreach (SlotID id in _naturalOrder)
             {
@@ -52,7 +51,8 @@ namespace Bubbles.Graphics.Transitions
                 PanelField field = _sceneManager.LoadScenePanel(toScene, id);
                 PanelPopTransition anim = field.GetComponent<PanelPopTransition>();
                 anim.DisappearImmediately();
-                yield return anim.TransitionOutSeq();
+                StartCoroutine(anim.TransitionInSeq());
+                yield return new WaitForSeconds(_gapBetweenPopsSecs);
             }
             _sceneManager.SetActiveScene(toScene);
             _sceneManager.SetLock(false);

@@ -8,12 +8,21 @@ using UnityEngine;
 
 namespace Bubbles.GamePanels
 {
-    public class GameScene : SerializedMonoBehaviour
+    public class GameScene : MonoBehaviour
     {
-        public Dictionary<SlotID, Panel> PanelPrefabs => _panels;
+        public Dictionary<SlotID, Panel> PanelPrefabs
+        {
+            get
+            {
+                _panels = _slotData.ToDictionary(x => x.ID, x => x.Panel);
+                return _panels;
+            }
+        }
         
-        [OdinSerialize] private Dictionary<SlotID, Panel> _panels;
-        [OdinSerialize] private List<SceneTransition> _transitions;
+        private Dictionary<SlotID, Panel> _panels;
+
+        [SerializeField] private List<SlotData> _slotData;
+        [SerializeField] private List<SceneTransition> _transitions;
         [field: SerializeField] public bool IsEndingScene { get; private set; }
         [field: SerializeField] [field: ShowIf("IsEndingScene")] public Endings Ending { get; private set; }
         
@@ -40,10 +49,17 @@ namespace Bubbles.GamePanels
         [Button]
         public void UpdateChildPanelIDs()
         {
-            _panels.ForEach(x => x.Value.ID = x.Key);
+            PanelPrefabs.ForEach(x => x.Value.ID = x.Key);
         }
     }
 
+    [Serializable]
+    public struct SlotData
+    {
+        public SlotID ID;
+        public Panel Panel;
+    }
+    
     [Serializable]
     public struct SceneTransition
     {

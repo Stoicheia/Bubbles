@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Bubbles.GamePanels;
 using DG.Tweening;
 using UnityEngine;
@@ -14,7 +15,12 @@ namespace Bubbles.Graphics.Transitions
         [SerializeField] private Ease _easeIn;
         [SerializeField] private Ease _easeOut;
         [SerializeField] private float _duration;
-        
+
+        private void Start()
+        {
+            _panelField = GetComponent<PanelField>();
+        }
+
         public override IEnumerator TransitionInSeq()
         {
             var pTransform = _panelField.transform;
