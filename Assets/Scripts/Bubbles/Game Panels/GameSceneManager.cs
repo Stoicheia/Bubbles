@@ -84,6 +84,11 @@ namespace Bubbles.GamePanels
             return true;
         }
 
+        public bool CanInteract(PanelPickup pickup, Panel panel)
+        {
+            return _activeScenePrefab.IsValidInteraction(new SceneInteraction(pickup.ParentID, panel.ID));
+        }
+
         private IEnumerator SceneTransitionSequence(GameScene toScene)
         {
             _isLocked = true;

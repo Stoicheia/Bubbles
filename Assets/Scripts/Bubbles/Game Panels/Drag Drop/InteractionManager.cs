@@ -12,6 +12,7 @@ namespace Bubbles.InteractableInput
         [Header("Dependencies")]
         [SerializeField] private DragInteractionHandler _dragHandler;
         [FormerlySerializedAs("_sceneManager")] [SerializeField] private GameSceneManager _gameSceneManager;
+        private Panel _panelUnderMouse;
 
         private void OnEnable()
         {
@@ -27,6 +28,31 @@ namespace Bubbles.InteractableInput
 
         private void Update()
         {
+            HandleDragOnInteractableHover();
+        }
+        
+        private void HandleDragOnInteractableHover()
+        {
+            PanelPickup currentlyDragging = _dragHandler.CurrentlyDragging;
+            if (currentlyDragging == null) return;
+            Panel detectedUnderMouse = _dragHandler.PanelUnderMouse;
+            bool underMouseChanged = detectedUnderMouse != _panelUnderMouse;
+            if (underMouseChanged)
+            {
+                if (detectedUnderMouse != null)
+                {
+                    bool canInteract = _gameSceneManager.CanInteract(currentlyDragging, detectedUnderMouse);
+                    HighlightState toState = canInteract ? HighlightState.HoverYes : HighlightState.HoverNo;
+                    detectedUnderMouse.SetHighlight(toState);
+                }
+
+                if (_panelUnderMouse != null)
+                {
+                    _panelUnderMouse.SetHighlight(HighlightState.Disabled);
+                }
+            }
+
+            _panelUnderMouse = detectedUnderMouse;
         }
 
         private List<Panel> GetAllPanels()

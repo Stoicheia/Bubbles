@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dragHandler: {fileID: 246094496}
-  _sceneManager: {fileID: 917386858}
+  _gameSceneManager: {fileID: 917386858}
 --- !u!114 &246094496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -972,6 +972,7 @@ MonoBehaviour:
   _sceneRoot: {fileID: 62798991}
   _activeScenePrefab: {fileID: 0}
   _isLocked: 0
+  _loadOnStart: {fileID: 4359591549995191550, guid: e320ab7a421e87c43b023bb04631d141, type: 3}
 --- !u!4 &917386859
 Transform:
   m_ObjectHideFlags: 0

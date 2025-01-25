@@ -14,7 +14,7 @@ namespace Bubbles.GamePanels
         [SerializeField] private bool _isLocked;
         
         [Header("Dependencies")]
-        [SerializeField] private Image _background;
+        [SerializeField] private RectTransform _background;
         [SerializeField] private Image _toHighlight;
         [SerializeField] private PanelPickup _pickup;
 
