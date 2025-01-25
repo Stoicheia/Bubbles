@@ -12,6 +12,7 @@ namespace Bubbles.GamePanels
         {
             UnloadInstantly();
             ActivePanelInstance = Instantiate(panelPrefab, transform);
+            ActivePanelInstance.transform.localPosition = Vector3.zero;
         }
 
         public void UnloadInstantly()
