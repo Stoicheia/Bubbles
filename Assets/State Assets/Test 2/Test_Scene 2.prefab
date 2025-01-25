@@ -85,6 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3975142697213198547}
   - component: {fileID: 2827523368661028890}
+  - component: {fileID: 3934110117025205946}
   m_Layer: 5
   m_Name: Test_Scene 2
   m_TagString: Untagged
@@ -130,6 +131,168 @@ MonoBehaviour:
   _pickupFields:
   - {fileID: 5683330654552340368}
   <ImageToHighlight>k__BackingField: {fileID: 8731191711959472193}
+--- !u!114 &3934110117025205946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630291278311364832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2135c7759a1d4983991f9f74b1c52180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _highlightColors
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[Bubbles.HighlightState, Assembly-CSharp],[UnityEngine.Color,
+        UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Bubbles.HighlightState,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 0.9821138
+    - Name: 
+      Entry: 4
+      Data: 0.6679245
+    - Name: 
+      Entry: 4
+      Data: 0.05490196
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.806226254
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 4
+      Data: 0.6981132
+    - Name: 
+      Entry: 4
+      Data: 0.08627451
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.8981132
+    - Name: 
+      Entry: 4
+      Data: 0.366023481
+    - Name: 
+      Entry: 4
+      Data: 0.366023481
+    - Name: 
+      Entry: 4
+      Data: 0.06666667
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  _imageField: {fileID: 8731191711959472193}
+  _t: 0
+  _currentIntensity: 0
+  _currentTargetColor: {r: 0, g: 0, b: 0, a: 0}
+  _intensityTransitionSeconds: 0.3
+  _pulsateAmplitude: 0.05
+  _pulsateFrequency: 1
 --- !u!1 &2233970134102453006
 GameObject:
   m_ObjectHideFlags: 0

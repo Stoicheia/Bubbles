@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Bubbles.Graphics;
 using Bubbles.InteractableInput;
 using Bubbles.Manager;
 using Sirenix.OdinInspector;
@@ -19,6 +20,15 @@ namespace Bubbles
             return IsActive;
         }
 
+        public bool CanInteract(ItemAsset item)
+        {
+            return GetReceivableItems().Contains(item);
+        }
         public abstract bool Interact(ItemAsset item);
+
+        public InteractableHighlight GetHighlighter()
+        {
+            return GetComponentInChildren<InteractableHighlight>();
+        }
     }
 }

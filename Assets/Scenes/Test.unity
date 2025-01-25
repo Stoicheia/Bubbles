@@ -569,6 +569,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test_Scene 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3934110117025205946, guid: 7b9c9266bff2fda41900fc6cd68dc193, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 3934110117025205946, guid: 7b9c9266bff2fda41900fc6cd68dc193, type: 3}
     - target: {fileID: 3975142697213198547, guid: 7b9c9266bff2fda41900fc6cd68dc193, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1788,6 +1792,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5893088272163215998, guid: 32c6eaa6dc6fb7246a5a4a430bbcc414, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 5893088272163215998, guid: 32c6eaa6dc6fb7246a5a4a430bbcc414, type: 3}
     - target: {fileID: 6689544023109046921, guid: 32c6eaa6dc6fb7246a5a4a430bbcc414, type: 3}
       propertyPath: serializationData.Prefab
       value: 

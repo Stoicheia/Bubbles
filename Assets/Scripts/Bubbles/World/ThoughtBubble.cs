@@ -24,12 +24,11 @@ namespace Bubbles
         
         public override bool Interact(ItemAsset item)
         {
-            Dictionary<ItemAsset, ThoughtBubbleStateAsset> transitionsTo = State.TransitionsByAddItem;
-            if (!transitionsTo.ContainsKey(item))
+            if (!CanInteract(item))
             {
                 return false;
             }
-            ThoughtBubbleStateAsset toState = transitionsTo[item];
+            ThoughtBubbleStateAsset toState = State.TransitionsByAddItem[item];
             State = toState;
             RenderCurrentStateInstantly();
             

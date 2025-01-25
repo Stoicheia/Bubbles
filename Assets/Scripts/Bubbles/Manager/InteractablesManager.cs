@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Bubbles.Graphics;
 using Bubbles.InteractableInput;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -19,19 +20,45 @@ namespace Bubbles.Manager
 
         private void OnEnable()
         {
+            _dragHandler.OnStartPickup += HandleStartPickup;
             _dragHandler.OnEndPickup += HandleReleasePickup;
         }
         
-        public List<Interactable> GetActiveInteractables()
+        public IEnumerable<Interactable> GetActiveInteractables()
         {
-            List<Interactable> active = AllInteractables.Where(x => x.IsActive).ToList();
+            IEnumerable<Interactable> active = AllInteractables.Where(x => x.IsActive);
             return active;
+        }
+        
+        private void HandleStartPickup(Pickup pickup, Vector2 _)
+        {
+            ItemAsset pickedItem = pickup.Item;
+            IEnumerable<Interactable> validInteractables = GetActiveInteractables().Where(x => x.CanInteract(pickedItem));
+            foreach (Interactable valid in validInteractables)
+            {
+                InteractableHighlight highlighter = valid.GetHighlighter();
+                if (highlighter == null) continue;
+                highlighter.SetHighlightState(HighlightState.CanInteract);
+            }
         }
         
         private void HandleReleasePickup(Pickup pickup)
         {
+            ItemAsset item = pickup.Item;
             Interactable underMouse = _dragHandler.InteractableUnderMouse;
             if (underMouse == null) return;
+            bool canInteract = underMouse.CanInteract(item);
+            if (canInteract)
+            {
+                underMouse.Interact(item);
+            }
+
+            foreach (Interactable active in GetActiveInteractables())
+            {
+                InteractableHighlight highlighter = active.GetHighlighter();
+                if (highlighter == null) continue;
+                highlighter.SetHighlightState(HighlightState.CanInteract);
+            }
         }
     }
 }
