@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -9,8 +10,13 @@ namespace Bubbles
     public class ThoughtBubble : Interactable
     {
         [SerializeField] private RectTransform _sceneRoot;
-        [SerializeField] private RectTransform _scenePrefab;
+        private RectTransform _sceneObject;
         [field: SerializeField] public ThoughtBubbleStateAsset State { get; private set; }
+
+        private void Start()
+        {
+            _sceneObject = GetComponentInChildren<ThoughtBubbleStateScene>().GetComponent<RectTransform>();
+        }
 
         public override List<ItemAsset> GetReceivableItems()
         {
@@ -25,8 +31,9 @@ namespace Bubbles
         [Button(ButtonSizes.Large)]
         public void RenderCurrentStateInstantly()
         {
-            Destroy(_scenePrefab.gameObject);
-            _scenePrefab = Instantiate(State.Scene, _sceneRoot).GetComponent<RectTransform>();
+            if(_sceneObject != null)
+                Destroy(_sceneObject.gameObject);
+            _sceneObject = Instantiate(State.Scene, _sceneRoot).GetComponent<RectTransform>();
         }
         
         [Button]
