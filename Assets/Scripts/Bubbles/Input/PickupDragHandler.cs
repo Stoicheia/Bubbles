@@ -6,11 +6,12 @@ namespace Bubbles.InteractableInput
 {
     public class PickupDragHandler : MonoBehaviour
     {
-        public event Action<Pickup> OnStartPickup;
+        public event Action<Pickup, Vector2> OnStartPickup;
         public event Action<Pickup> OnEndPickup;
         
         public Interactable InteractableUnderMouse { get; private set; }
         public Pickup PickupUnderMouse { get; private set; }
+        public Pickup CurrentlyDragging { get; private set; }
 
         private void OnEnable()
         {
@@ -64,13 +65,15 @@ namespace Bubbles.InteractableInput
         }
         
                 
-        private void HandleStartPickup(Pickup pickup)
+        private void HandleStartPickup(Pickup pickup, Vector2 startPos)
         {
-            OnStartPickup?.Invoke(pickup);
+            CurrentlyDragging = pickup;
+            OnStartPickup?.Invoke(pickup, startPos);
         }
         
         private void HandleEndPickup(Pickup pickup)
         {
+            CurrentlyDragging = null;
             OnEndPickup?.Invoke(pickup);
         }
 

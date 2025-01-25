@@ -22,7 +22,7 @@ namespace Bubbles.Graphics
         {
             switch (state)
             {
-                case PickupState.Absent:
+                case PickupState.Dragging:
                     SetAbsent();
                     break;
                 case PickupState.AtRest:

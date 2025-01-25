@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace DebugGraphics
 {
-    public class InteractableUnderMouseWriter : MonoBehaviour
+    public class UnderMouseWriter : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _textField;
         [SerializeField] private TextMeshProUGUI _textFieldP;
