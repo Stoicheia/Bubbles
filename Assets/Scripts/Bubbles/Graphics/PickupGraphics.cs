@@ -8,7 +8,6 @@ namespace Bubbles.Graphics
     public class PickupGraphics : SerializedMonoBehaviour
     {
         [SerializeField] private Image _imageField;
-        [SerializeField] private Pickup _pickup;
         private Material _imageMaterial;
 
         private void Start()

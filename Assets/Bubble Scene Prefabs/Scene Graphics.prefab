@@ -141,6 +141,8 @@ GameObject:
   - component: {fileID: 3860018154080427302}
   - component: {fileID: 5683330654552340368}
   - component: {fileID: 6689544023109046921}
+  - component: {fileID: 6814790122403720344}
+  - component: {fileID: 3952801321490377646}
   m_Layer: 5
   m_Name: Pickup
   m_TagString: Untagged
@@ -181,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Item>k__BackingField: {fileID: 11400000, guid: 692b185dfebe1e44ebb09816685cd1ec, type: 2}
+  _graphics: {fileID: 6689544023109046921}
 --- !u!114 &6689544023109046921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +206,44 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _imageField: {fileID: 6295441377408362675}
+--- !u!222 &6814790122403720344
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233970134102453006}
+  m_CullTransparentMesh: 1
+--- !u!114 &3952801321490377646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233970134102453006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &4339274919475796928
 GameObject:
   m_ObjectHideFlags: 0

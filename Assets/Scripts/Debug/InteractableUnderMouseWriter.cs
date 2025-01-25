@@ -17,21 +17,21 @@ namespace DebugGraphics
             Interactable underMouse = _mouseDragHandler.InteractableUnderMouse;
             if (underMouse == null)
             {
-                _textField.text = "Under Mouse: None";
+                _textField.text = "Interactable: None";
             }
             else
             {
-                _textField.text = $"Under Mouse: {underMouse.gameObject.name}";
+                _textField.text = $"Interactable: {underMouse.gameObject.name}";
             }
 
             Pickup pickup = _mouseDragHandler.PickupUnderMouse;
             if (pickup == null)
             {
-                _textFieldP.text = "Under Mouse: None";
+                _textFieldP.text = "Pickup: None";
             }
             else
             {
-                _textFieldP.text = $"Under Mouse: {pickup.Item.name}";
+                _textFieldP.text = $"Pickup: {pickup.Item.name}";
             }
         }
     }

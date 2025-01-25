@@ -17,8 +17,10 @@ namespace Bubbles.Graphics
         private void OnEnable()
         {
             _imgTransform = _imageField.GetComponent<RectTransform>();
+            _pickupDragHandler.OnStartPickup += HandleStartPickup;
+            _pickupDragHandler.OnEndPickup += HandleEndPickup;
         }
-
+        
         private void Awake()
         {
             _imageField.raycastTarget = false;
@@ -39,6 +41,16 @@ namespace Bubbles.Graphics
         {
             _imageField.enabled = false;
         }
+        
+        private void HandleStartPickup(Pickup pickup)
+        {
+            Display(pickup.Item);
+        }
+        
+        private void HandleEndPickup(Pickup pickup)
+        {
+            Disable();
+        }
 
         private void ImageFollowMouse()
         {
@@ -55,5 +67,8 @@ namespace Bubbles.Graphics
             // Set the position of the UI Image
             _imgTransform.anchoredPosition = mousePosition;
         }
+        
+
+
     }
 }
