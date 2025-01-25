@@ -26,6 +26,11 @@ namespace Bubbles.GamePanels
         {
             GetComponent<Image>().color = Color.clear;
             _pickup.ParentPanel = this;
+            PanelField parentField = GetComponentInParent<PanelField>();
+            if (parentField != null)
+            {
+                ID = parentField.ID;
+            }
         }
 
         public bool IsActive()

@@ -32,39 +32,44 @@ namespace Bubbles.InteractableInput
         
         private void Update()
         {
-            var interactableDetected = !_transitor.HasPickup ? CanvasUtility.DetectUnderCursor<Panel>()
-                    : CanvasUtility.DetectUnderRect<Panel>(_transitor.Rect, _canvas);
+            var interactableDetected = CanvasUtility.DetectUnderCursor<Panel>();
             var pickupDetected = CanvasUtility.DetectUnderCursor<PanelPickup>();
-            
-            if (pickupDetected != PickupUnderMouse)
-            {
-                if (PickupUnderMouse != null)
-                {
-                    PickupUnderMouse.Unhover();
-                }
 
-                if (pickupDetected != null)
+            if (CurrentlyDragging == null)
+            {
+                if (pickupDetected != PickupUnderMouse)
                 {
-                    pickupDetected.Hover();
+                    if (PickupUnderMouse != null)
+                    {
+                        PickupUnderMouse.Unhover();
+                    }
+
+                    if (pickupDetected != null)
+                    {
+                        pickupDetected.Hover();
+                    }
                 }
             }
-            
+
             PanelUnderMouse = interactableDetected;
             PickupUnderMouse = pickupDetected;
 
-            if (Input.GetMouseButtonDown(0))
+            if (CurrentlyDragging == null)
             {
-                if (PickupUnderMouse != null)
+                if (Input.GetMouseButtonDown(0))
                 {
-                    PickupUnderMouse.Click();
+                    if (PickupUnderMouse != null)
+                    {
+                        PickupUnderMouse.Click();
+                    }
                 }
-            }
 
-            if (Input.GetMouseButtonUp(0))
-            {
-                if (PickupUnderMouse != null)
+                if (Input.GetMouseButtonUp(0))
                 {
-                    PickupUnderMouse.Hover();
+                    if (PickupUnderMouse != null)
+                    {
+                        PickupUnderMouse.Hover();
+                    }
                 }
             }
         }

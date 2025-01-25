@@ -14,6 +14,7 @@ namespace Bubbles.Graphics
         
         [SerializeField] private Canvas _canvas;
         [SerializeField] private Image _imageField;
+        [SerializeField] private RectTransform _collisionField;
         [SerializeField] private DragInteractionHandler _pickupDragHandler;
 
         private RectTransform _imgTransform;
@@ -40,6 +41,17 @@ namespace Bubbles.Graphics
         {
             _imageField.enabled = true;
             _imageField.sprite = sprite;
+            _imageField.SetNativeSize();
+            MatchSize(_imageField.rectTransform, _collisionField);
+        }
+        
+        private void MatchSize(RectTransform source, RectTransform destination)
+        {
+            // Copy anchors, pivot, and size
+            destination.anchorMin = source.anchorMin;
+            destination.anchorMax = source.anchorMax;
+            destination.pivot = source.pivot;
+            destination.sizeDelta = source.sizeDelta;
         }
 
         public void Disable()

@@ -39,12 +39,21 @@ namespace Bubbles.GamePanels
 
         private void Start()
         {
+            DeleteTestVisualisation();
             LoadSceneInstantly(_loadOnStart);
         }
 
         public void LoadSceneWithAnimation(SceneInteraction fromInteraction, GameScene scene)
         {
             _anims.TransitionTo(fromInteraction, scene);
+        }
+
+        public void DeleteTestVisualisation()
+        {
+            foreach (var kvp in _panelFields)
+            {
+                Destroy(kvp.Value.GetComponentInChildren<Panel>().gameObject);
+            }
         }
 
         [Button(ButtonSizes.Large)]
