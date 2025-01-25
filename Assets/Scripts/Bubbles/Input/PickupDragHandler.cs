@@ -17,6 +17,8 @@ namespace Bubbles.InteractableInput
         {
             Pickup.OnPickup += HandleStartPickup;
             Pickup.OnRelease += HandleEndPickup;
+            InteractableUnderMouse = null;
+            PickupUnderMouse = null;
         }
         private void OnDisable()
         {
@@ -28,7 +30,7 @@ namespace Bubbles.InteractableInput
         {
             var interactableDetected = CanvasUtility.DetectUnderCursor<Interactable>();
             var pickupDetected = CanvasUtility.DetectUnderCursor<Pickup>();
-
+            
             if (pickupDetected != PickupUnderMouse)
             {
                 if (PickupUnderMouse != null)

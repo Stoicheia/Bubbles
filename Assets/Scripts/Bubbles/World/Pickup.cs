@@ -25,6 +25,7 @@ namespace Bubbles
         private void Start()
         {
             _myCanvas = FindAnyObjectByType<Canvas>();
+            _state = PickupState.AtRest;
         }
 
         private void Update()
