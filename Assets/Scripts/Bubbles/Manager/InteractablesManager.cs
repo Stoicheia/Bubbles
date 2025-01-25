@@ -41,18 +41,33 @@ namespace Bubbles.Manager
             Pickup currentlyDragging = _dragHandler.CurrentlyDragging;
             if (currentlyDragging == null) return;
             Interactable detectedUnderMouse = _dragHandler.InteractableUnderMouse;
-            if (detectedUnderMouse != _interactableUnderMouse)
+            bool underMouseChanged = detectedUnderMouse != _interactableUnderMouse;
+            if (underMouseChanged)
             {
                 if (detectedUnderMouse != null)
                 {
-                    if(detectedUnderMouse.CanInteract()) // TODO : currentlyDragging
+                    if (detectedUnderMouse.CanInteract(currentlyDragging.Item))
+                    {
+                        var gfx = detectedUnderMouse.GetHighlighter();
+                        if (detectedUnderMouse.CanInteract(currentlyDragging.Item))
+                        {
+                            gfx?.SetHighlightState(HighlightState.HoverYes);
+                        }
+                        else
+                        {
+                            gfx?.SetHighlightState(HighlightState.HoverNo);
+                        }
+                    }
                 }
 
                 if (_interactableUnderMouse != null)
                 {
-                    
+                    bool canInteract = _interactableUnderMouse.CanInteract(currentlyDragging.Item);
+                    _interactableUnderMouse.GetHighlighter()?.SetHighlightState(canInteract ? HighlightState.CanInteract : HighlightState.Disabled);
                 }
             }
+
+            _interactableUnderMouse = detectedUnderMouse;
         }
 
         public IEnumerable<Interactable> GetActiveInteractables()
@@ -75,6 +90,13 @@ namespace Bubbles.Manager
         
         private void HandleReleasePickup(Pickup pickup)
         {
+            foreach (Interactable active in GetActiveInteractables())
+            {
+                InteractableHighlight highlighter = active.GetHighlighter();
+                if (highlighter == null) continue;
+                highlighter.SetHighlightState(HighlightState.Disabled);
+            }
+            
             ItemAsset item = pickup.Item;
             Interactable underMouse = _dragHandler.InteractableUnderMouse;
             if (underMouse == null) return;
@@ -82,13 +104,6 @@ namespace Bubbles.Manager
             if (canInteract)
             {
                 underMouse.Interact(item);
-            }
-
-            foreach (Interactable active in GetActiveInteractables())
-            {
-                InteractableHighlight highlighter = active.GetHighlighter();
-                if (highlighter == null) continue;
-                highlighter.SetHighlightState(HighlightState.CanInteract);
             }
         }
     }

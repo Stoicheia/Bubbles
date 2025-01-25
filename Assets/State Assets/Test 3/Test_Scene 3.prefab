@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300002, guid: 07103c52b3aaeca4da8a83361edd059f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 519dafacd208bb64c83d5124be03b09d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 2827523368661028890}
   - component: {fileID: 3934110117025205946}
   m_Layer: 5
-  m_Name: Test_Scene 2
+  m_Name: Test_Scene 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,7 +194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34, y: 33.93}
+  m_AnchoredPosition: {x: 29.9, y: 31.8}
   m_SizeDelta: {x: 31.99, y: 32.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5683330654552340368
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55736ed7300d4823895f1a8dfcbff28c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Item>k__BackingField: {fileID: 11400000, guid: 6ce1cc1fb226eb240a52cff22aa51e5e, type: 2}
+  <Item>k__BackingField: {fileID: 11400000, guid: 692b185dfebe1e44ebb09816685cd1ec, type: 2}
   _graphics: {fileID: 6689544023109046921}
 --- !u!114 &6689544023109046921
 MonoBehaviour:
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3547169, g: 0.008031358, b: 0.29737, a: 1}
+  m_Color: {r: 0.007843137, g: 0.31575558, b: 0.3529412, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: B
+  m_text: C
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}

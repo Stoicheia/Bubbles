@@ -22,7 +22,8 @@ namespace Bubbles
 
         public bool CanInteract(ItemAsset item)
         {
-            return GetReceivableItems().Contains(item);
+            var receivable = GetReceivableItems();
+            return receivable.Contains(item);
         }
         public abstract bool Interact(ItemAsset item);
 

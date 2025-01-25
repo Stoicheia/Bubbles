@@ -15,12 +15,12 @@ namespace Bubbles.Graphics
         [ReadOnly] [SerializeField] private float _t;
         [ReadOnly] [SerializeField] private float _currentIntensity;
         [ReadOnly] [SerializeField] private Color _currentTargetColor;
+        [SerializeField] private GraphicsSettings _settings;
 
-        [Header("Graphics Settings")] 
-        [OdinSerialize] private Dictionary<HighlightState, Color> _highlightColors;
-        [SerializeField] private float _intensityTransitionSeconds;
-        [SerializeField] private float _pulsateAmplitude;
-        [SerializeField] private float _pulsateFrequency;
+        private Dictionary<HighlightState, Color> _highlightColors => _settings.HighlightColors;
+        private float _intensityTransitionSeconds => _settings.IntensityTransitionSeconds;
+        private float _pulsateAmplitude => _settings.PulsateAmplitude;
+        private float _pulsateFrequency => _settings.PulsateFrequency;
 
         private Coroutine _currentTransition;
         
@@ -55,7 +55,7 @@ namespace Bubbles.Graphics
             Color target = _currentTargetColor;
             float alpha = target.a * _currentIntensity + pulsateDeviance;
             float a01 = Mathf.Clamp01(alpha);
-            return new Color(target.r, target.r, target.r, a01);
+            return new Color(target.r, target.g, target.b, a01);
         }
 
         private IEnumerator EnableHighlightSequence(Color to)

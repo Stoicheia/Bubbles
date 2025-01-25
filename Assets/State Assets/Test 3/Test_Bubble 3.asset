@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a95085062d74052b16e592a05a5c58a, type: 3}
-  m_Name: Test_Bubble 2
+  m_Name: Test_Bubble 3
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 692b185dfebe1e44ebb09816685cd1ec, type: 2}
-    - {fileID: 11400000, guid: ce84210bbf699f946a45c6082b6b67ad, type: 2}
     - {fileID: 11400000, guid: 6ce1cc1fb226eb240a52cff22aa51e5e, type: 2}
-    - {fileID: 11400000, guid: 6481762cf95d80846bb1570a1223305d, type: 2}
+    - {fileID: 11400000, guid: aaf89ef46a414ec49b390a08404fdcee, type: 2}
+    - {fileID: 11400000, guid: 692b185dfebe1e44ebb09816685cd1ec, type: 2}
+    - {fileID: 11400000}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -106,6 +106,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
   <IsInteractable>k__BackingField: 1
-  <Scene>k__BackingField: {fileID: 2827523368661028890, guid: 7b9c9266bff2fda41900fc6cd68dc193, type: 3}
+  <Scene>k__BackingField: {fileID: 2827523368661028890, guid: b96616fe1b2655148bfff76aeb8952ca, type: 3}
   _itemsInScene:
-  - {fileID: 11400000, guid: 6ce1cc1fb226eb240a52cff22aa51e5e, type: 2}
+  - {fileID: 11400000, guid: 692b185dfebe1e44ebb09816685cd1ec, type: 2}
