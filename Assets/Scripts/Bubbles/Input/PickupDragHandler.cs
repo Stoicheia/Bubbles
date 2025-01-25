@@ -24,8 +24,6 @@ namespace Bubbles.InteractableInput
             Pickup.OnRelease -= HandleEndPickup;
         }
         
-
-
         private void Update()
         {
             var interactableDetected = CanvasUtility.DetectUnderCursor<Interactable>();
@@ -63,7 +61,6 @@ namespace Bubbles.InteractableInput
                 }
             }
         }
-        
                 
         private void HandleStartPickup(Pickup pickup, Vector2 startPos)
         {

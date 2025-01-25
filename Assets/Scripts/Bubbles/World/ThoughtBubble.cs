@@ -16,6 +16,24 @@ namespace Bubbles
         private void Start()
         {
             _sceneObject = GetComponentInChildren<ThoughtBubbleStateScene>().GetComponent<RectTransform>();
+            if (State != null)
+            {
+                RenderCurrentStateInstantly();
+            }
+        }
+        
+        public override bool Interact(ItemAsset item)
+        {
+            Dictionary<ItemAsset, ThoughtBubbleStateAsset> transitionsTo = State.TransitionsByAddItem;
+            if (!transitionsTo.ContainsKey(item))
+            {
+                return false;
+            }
+            ThoughtBubbleStateAsset toState = transitionsTo[item];
+            State = toState;
+            RenderCurrentStateInstantly();
+            
+            return true;
         }
 
         public override List<ItemAsset> GetReceivableItems()
@@ -27,7 +45,7 @@ namespace Bubbles
         {
             return State.Scene.ImageToHighlight;
         }
-        
+
         [Button(ButtonSizes.Large)]
         public void RenderCurrentStateInstantly()
         {

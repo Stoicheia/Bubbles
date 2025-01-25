@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Bubbles.InteractableInput;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -6,7 +7,7 @@ namespace Utility
 {
     public static class CanvasUtility
     {
-        public static T DetectUnderCursor<T>() where T : UnityEngine.Component
+        public static T DetectUnderCursor<T>() where T : IMouseInteractor
         {
             PointerEventData pointerData = new PointerEventData(EventSystem.current)
             {
@@ -19,13 +20,13 @@ namespace Utility
             foreach (RaycastResult result in results)
             {
                 var obj = result.gameObject.GetComponent<T>();
-                if (obj != null)
+                if (obj != null && obj.IsActive())
                 {
                     return obj;
                 }
             }
 
-            return null;
+            return default(T);
         }
     }
 }

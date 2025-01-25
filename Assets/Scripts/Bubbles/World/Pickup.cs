@@ -1,5 +1,6 @@
 ﻿using System;
 using Bubbles.Graphics;
+using Bubbles.InteractableInput;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -9,7 +10,7 @@ using UnityEngine.UI;
 namespace Bubbles
 {
     [RequireComponent(typeof(Image))] // For raycasting purposes only. Set alpha to 0.
-    public class Pickup : MonoBehaviour
+    public class Pickup : MonoBehaviour, IMouseInteractor
     {
         public static event Action<Pickup, Vector2> OnPickup;
         public static event Action<Pickup> OnRelease;
@@ -89,6 +90,11 @@ namespace Bubbles
             if (_state == PickupState.Dragging) return;
             _state = PickupState.AtRest;
             _graphics.SetGraphics(_state);
+        }
+
+        public bool IsActive()
+        {
+            return _state != PickupState.Dragging;
         }
     }
 

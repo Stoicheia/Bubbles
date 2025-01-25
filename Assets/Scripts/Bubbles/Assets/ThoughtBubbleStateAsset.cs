@@ -25,6 +25,15 @@ namespace Bubbles
             {
                 TransitionsByRemoveItem.TryAdd(item, null);
             }
+
+            var existingRemoves = new List<ItemAsset>(TransitionsByRemoveItem.Keys);
+            foreach (ItemAsset item in existingRemoves)
+            {
+                if (!_itemsInScene.Contains(item))
+                {
+                    TransitionsByRemoveItem.Remove(item);
+                }
+            }
         }
     }
 

@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a95085062d74052b16e592a05a5c58a, type: 3}
+  m_Name: Test_Bubble 2
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 6ce1cc1fb226eb240a52cff22aa51e5e, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: <TransitionsByAddItem>k__BackingField
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[Bubbles.ItemAsset, Assembly-CSharp],[Bubbles.ThoughtBubbleStateAsset,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.ObjectEqualityComparer`1[[Bubbles.ItemAsset,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: <TransitionsByRemoveItem>k__BackingField
+      Entry: 7
+      Data: 2|System.Collections.Generic.Dictionary`2[[Bubbles.ItemAsset, Assembly-CSharp],[Bubbles.ThoughtBubbleStateAsset,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 1
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 10
+      Data: 0
+    - Name: $v
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: <TransitionsByReaction>k__BackingField
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[Bubbles.ReactionInput, Assembly-CSharp],[Bubbles.ThoughtBubbleStateAsset,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.ObjectEqualityComparer`1[[Bubbles.ReactionInput,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  <IsInteractable>k__BackingField: 1
+  <Scene>k__BackingField: {fileID: 2827523368661028890, guid: 7b9c9266bff2fda41900fc6cd68dc193, type: 3}
+  _itemsInScene:
+  - {fileID: 11400000, guid: 6ce1cc1fb226eb240a52cff22aa51e5e, type: 2}
