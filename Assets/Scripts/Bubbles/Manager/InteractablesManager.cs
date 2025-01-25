@@ -38,13 +38,14 @@ namespace Bubbles.Manager
 
         private void HandleDragOnInteractableHover()
         {
-            if (_dragHandler.CurrentlyDragging == null) return;
+            Pickup currentlyDragging = _dragHandler.CurrentlyDragging;
+            if (currentlyDragging == null) return;
             Interactable detectedUnderMouse = _dragHandler.InteractableUnderMouse;
             if (detectedUnderMouse != _interactableUnderMouse)
             {
                 if (detectedUnderMouse != null)
                 {
-                    if(detectedUnderMouse.CanInteract()) // TODO
+                    if(detectedUnderMouse.CanInteract()) // TODO : currentlyDragging
                 }
 
                 if (_interactableUnderMouse != null)
