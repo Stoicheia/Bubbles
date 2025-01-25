@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 
 namespace Bubbles.GamePanels
 {
-    public class SceneManager : SerializedMonoBehaviour
+    public class GameSceneManager : SerializedMonoBehaviour
     {
         public event Action<SceneInteraction> OnFailInteraction;
         public event Action<SceneInteraction, GameScene> OnTransitionFromInteraction;
@@ -19,12 +19,20 @@ namespace Bubbles.GamePanels
         [SerializeField] [ReadOnly] private GameScene _activeScenePrefab;
         [SerializeField] [ReadOnly] private bool _isLocked;
 
+        [Header("Debug")]
+        [SerializeField] private GameScene _loadOnStart;
+
         private void Awake()
         {
             foreach (var kvp in _panelFields)
             {
                 kvp.Value.ID = kvp.Key;
             }
+        }
+
+        private void Start()
+        {
+            LoadScene(_loadOnStart);
         }
 
         public void LoadScene(GameScene scene)
@@ -35,11 +43,6 @@ namespace Bubbles.GamePanels
         [Button(ButtonSizes.Large)]
         public void LoadSceneInstantly(GameScene scene)
         {
-            if (_activeScenePrefab != null)
-            {
-                Destroy(_activeScenePrefab.gameObject);
-            }
-
             Dictionary<SlotID, Panel> newScenePanels = scene.PanelPrefabs;
             foreach (var kvp in _panelFields)
             {

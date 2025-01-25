@@ -7,10 +7,11 @@ using UnityEngine.UI;
 
 namespace Bubbles.GamePanels
 {
+    [RequireComponent(typeof(Image))]
     public class Panel : MonoBehaviour, IMouseInteractor
     {
         [field: SerializeField] public SlotID ID { get; set; }
-        [SerializeField] private bool _isActive;
+        [SerializeField] private bool _isLocked;
         
         [Header("Dependencies")]
         [SerializeField] private Image _background;
@@ -23,12 +24,13 @@ namespace Bubbles.GamePanels
 
         private void Start()
         {
+            GetComponent<Image>().color = Color.clear;
             _pickup.ParentPanel = this;
         }
 
         public bool IsActive()
         {
-            return _isActive;
+            return !_isLocked;
         }
 
         public void SetHighlight(HighlightState highlight)

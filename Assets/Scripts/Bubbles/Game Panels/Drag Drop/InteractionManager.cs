@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Bubbles.GamePanels;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Bubbles.InteractableInput
 {
@@ -10,7 +11,7 @@ namespace Bubbles.InteractableInput
     {
         [Header("Dependencies")]
         [SerializeField] private DragInteractionHandler _dragHandler;
-        [SerializeField] private SceneManager _sceneManager;
+        [FormerlySerializedAs("_sceneManager")] [SerializeField] private GameSceneManager _gameSceneManager;
 
         private void OnEnable()
         {
@@ -37,7 +38,7 @@ namespace Bubbles.InteractableInput
         private List<Panel> GetInteractablePanels(PanelPickup pickup)
         {
             Panel[] allPanelsInScene = FindObjectsByType<Panel>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
-            GameScene activeScene = _sceneManager.ActiveScene;
+            GameScene activeScene = _gameSceneManager.ActiveScene;
             List<Panel> validPanels = allPanelsInScene.Where(x =>
             {
                 SceneInteraction requested = new SceneInteraction(pickup.ParentID, x.ID);
@@ -66,7 +67,7 @@ namespace Bubbles.InteractableInput
             Panel panelUnderMouse = _dragHandler.PanelUnderMouse;
             if (panelUnderMouse == null) return;
             SceneInteraction interaction = new SceneInteraction(pickup.ParentID, panelUnderMouse.ID);
-            _sceneManager.TryInteraction(interaction);
+            _gameSceneManager.TryInteraction(interaction);
         }
         
         

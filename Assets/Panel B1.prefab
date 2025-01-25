@@ -138,7 +138,7 @@ MonoBehaviour:
     SerializationNodes: []
   <ParentPanel>k__BackingField: {fileID: 0}
   _graphics: {fileID: 5650281576350596729}
-  <SpriteInTransit>k__BackingField: {fileID: 21300002, guid: 07103c52b3aaeca4da8a83361edd059f, type: 3}
+  _overrideSpriteInTransit: {fileID: 0}
 --- !u!114 &5650281576350596729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,6 +496,8 @@ GameObject:
   - component: {fileID: 6707257450982278927}
   - component: {fileID: 6405587800011855814}
   - component: {fileID: 2912403798038377769}
+  - component: {fileID: 2017831829896409729}
+  - component: {fileID: 3779473186997196894}
   m_Layer: 5
   m_Name: Panel B1
   m_TagString: Untagged
@@ -538,17 +540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af5ab7cec8ed4f288e6ba0ef6b4f9901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
   <ID>k__BackingField: 0
-  _isActive: 1
+  _isLocked: 0
   _background: {fileID: 7231147926062184307}
   _toHighlight: {fileID: 5792693863790706185}
   _pickup: {fileID: 2838651935592961218}
@@ -571,3 +564,41 @@ MonoBehaviour:
   _currentIntensity: 0
   _currentTargetColor: {r: 0, g: 0, b: 0, a: 0}
   _settings: {fileID: 11400000, guid: 70019ad19bf0c9246a869171bcd0428e, type: 2}
+--- !u!222 &2017831829896409729
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5448412612933211268}
+  m_CullTransparentMesh: 1
+--- !u!114 &3779473186997196894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5448412612933211268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
