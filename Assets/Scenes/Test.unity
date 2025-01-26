@@ -372,7 +372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &177615920
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4546,13 +4546,17 @@ PrefabInstance:
       propertyPath: targetTransform
       value: 
       objectReference: {fileID: 1734853677}
+    - target: {fileID: 6441525698192171772, guid: ce3ac5b5328162a4a9da6b3d493037ba, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: f9105aa3860ee7640988e6812b072835, type: 2}
     - target: {fileID: 6444487091110716257, guid: ce3ac5b5328162a4a9da6b3d493037ba, type: 3}
       propertyPath: m_Name
       value: Tuto_01
       objectReference: {fileID: 0}
     - target: {fileID: 6444487091110716257, guid: ce3ac5b5328162a4a9da6b3d493037ba, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

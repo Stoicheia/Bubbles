@@ -12,6 +12,7 @@ namespace Bubbles.GamePanels
 {
     public class GameSceneManager : SerializedMonoBehaviour
     {
+        public static event Action OnTransition;
         public event Action<SceneInteraction> OnFailInteraction;
         public event Action<SceneInteraction, GameScene> OnTransitionFromInteraction;
         public GameScene ActiveScene
@@ -134,6 +135,7 @@ namespace Bubbles.GamePanels
             LoadSceneWithAnimation(interaction, toScene);
             
             OnTransitionFromInteraction?.Invoke(interaction, _activeScenePrefab);
+            OnTransition?.Invoke();
             return true;
         }
 
