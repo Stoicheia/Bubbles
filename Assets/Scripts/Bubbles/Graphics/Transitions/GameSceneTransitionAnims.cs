@@ -47,7 +47,7 @@ namespace Bubbles.Graphics.Transitions
         
         private IEnumerator ChainTransition(SceneInteraction fromInteraction, GameScene toScene)
         {
-            _sceneManager.SetLock(true);
+           // _sceneManager.SetLock(true);
             
             if (toScene.IsEndingScene)
             {
@@ -102,7 +102,7 @@ namespace Bubbles.Graphics.Transitions
             }
             else
             {
-                _sceneManager.SetLock(false);
+               // _sceneManager.SetLock(false);
             }
         }
     }
