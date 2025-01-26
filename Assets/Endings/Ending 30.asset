@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f61c613cf0c4b3682b11fd427534c49, type: 3}
   m_Name: Ending 30
   m_EditorClassIdentifier: 
-  Number: 30
-  Graphic: {fileID: 21300000, guid: dd69a607d8dcdf346954a86d4d68183a, type: 3}
-  Text: You discovered an ending!
-  IsComplete: 0
+  Number: 1
+  Graphic: {fileID: 21300000, guid: 806e236bc12668e4da974bb8f536d28f, type: 3}
+  Text: Triumphant is he who triumphs over the triumphant.
