@@ -5,6 +5,7 @@ using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using Sirenix.Utilities;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Bubbles.GamePanels
 {
@@ -57,6 +58,8 @@ namespace Bubbles.GamePanels
         {
             PanelPrefabs.ForEach(x => x.Value.ID = x.Key);
         }
+
+       
     }
 
     [Serializable]

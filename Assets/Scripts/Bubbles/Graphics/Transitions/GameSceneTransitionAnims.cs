@@ -7,13 +7,14 @@ using DG.Tweening;
 using Ending;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
+using Sirenix.Utilities;
 using UnityEngine;
 
 namespace Bubbles.Graphics.Transitions
 {
     public class GameSceneTransitionAnims : SerializedMonoBehaviour
     {
-        public static event Action Pop;
+        public static event Action<SlotID, Panel> OnPop;
         
         [OdinSerialize][ReadOnly] private Dictionary<SlotID, PanelField> _panelFields;
         [SerializeField] private GameSceneManager _sceneManager;
@@ -58,7 +59,7 @@ namespace Bubbles.Graphics.Transitions
                 PanelPopTransition anim = field.GetComponent<PanelPopTransition>();
                 anim.DisappearImmediately();
                 seqs.Add(StartCoroutine(anim.TransitionInSeq(_easeIn, _easeOut, _duration)));
-                Pop?.Invoke();
+                OnPop?.Invoke(id, field.ActivePanelInstance);
             }
             yield return new WaitForSeconds(_gapBetweenPopsSecs);
 
@@ -74,7 +75,7 @@ namespace Bubbles.Graphics.Transitions
                     PanelPopTransition anim = field.GetComponent<PanelPopTransition>();
                     anim.DisappearImmediately();
                     StartCoroutine(anim.TransitionInSeq(_easeIn, _easeOut, _duration));
-                    Pop?.Invoke();
+                    OnPop?.Invoke(id, field.ActivePanelInstance);
                     yield return new WaitForSeconds(_gapBetweenPopsSecs);
                 }
             }

@@ -14,4 +14,9 @@ public class SceneMover : MonoBehaviour
     {
         SceneManager.LoadScene("Start");
     }
+
+    public void End()
+    {
+        Application.Quit();
+    }
 }

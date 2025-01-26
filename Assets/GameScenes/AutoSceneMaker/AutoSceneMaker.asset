@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AutoSceneMaker
   m_EditorClassIdentifier: 
   _suffix: _D
-  _folderWithScenes: Assets/GameScenes
+  _folderWithScenes: Assets/GameScenes/Real Scenes
   _folderWithScriptables: Assets/GameScenes
   _newScenePrefabPath: Assets/GameScenes/_Test/Scene_Test.prefab
   _oldNormalPrefix: Scene

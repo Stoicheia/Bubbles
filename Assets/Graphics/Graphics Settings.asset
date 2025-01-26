@@ -88,7 +88,7 @@ MonoBehaviour:
       Data: 0.264150918
     - Name: 
       Entry: 4
-      Data: 0.2901961
+      Data: 0.6431373
     - Name: 
       Entry: 8
       Data: 
@@ -115,7 +115,7 @@ MonoBehaviour:
       Data: 0
     - Name: 
       Entry: 4
-      Data: 0.2901961
+      Data: 0.6431373
     - Name: 
       Entry: 8
       Data: 
@@ -142,7 +142,7 @@ MonoBehaviour:
       Data: 0
     - Name: 
       Entry: 4
-      Data: 0.286274523
+      Data: 0.5137255
     - Name: 
       Entry: 8
       Data: 
@@ -155,6 +155,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  <IntensityTransitionSeconds>k__BackingField: 0.12
-  <PulsateAmplitude>k__BackingField: 0.05
-  <PulsateFrequency>k__BackingField: 2.5
+  <IntensityTransitionSeconds>k__BackingField: 0.1
+  <PulsateAmplitude>k__BackingField: 0.16
+  <PulsateFrequency>k__BackingField: 2.4
