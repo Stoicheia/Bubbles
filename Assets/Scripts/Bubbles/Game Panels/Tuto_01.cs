@@ -1,4 +1,7 @@
+using System;
 using System.Collections;
+using Bubbles.GamePanels;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
@@ -13,7 +16,22 @@ public class Tuto_01 : MonoBehaviour
     private int spriteStage = 0; //0: unclickedMouse, 1:clickedMouse, 2:movingMouse, 3:endWaitingMouse
     private Vector2 startPosition;
     private bool isInCour = false;
+
+    private void OnEnable()
+    {
+        GameSceneManager.OnTransition += HandleTransition;
+    }
     
+    private void OnDisable()
+    {
+        GameSceneManager.OnTransition -= HandleTransition;
+    }
+
+    private void HandleTransition()
+    {
+        gameObject.SetActive(false);
+    }
+
 
     private void Start()
     {

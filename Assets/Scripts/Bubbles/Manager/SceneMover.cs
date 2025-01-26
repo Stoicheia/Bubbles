@@ -4,7 +4,7 @@ public class SceneMover : MonoBehaviour
 {
     public void LoadGameplayScene()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene("Test");
     }
     public void LoadEndingsScene()
     {

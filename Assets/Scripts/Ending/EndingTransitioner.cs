@@ -32,6 +32,7 @@ namespace Ending
 
         private IEnumerator EndingSequence(EndingAsset asset)
         {
+            asset.IsComplete = true;
             _whitePanel.gameObject.SetActive(true);
             var fadeIn = _whitePanel.DOColor(Color.white, _halfDuration).SetEase(_easeIn);
             yield return fadeIn.WaitForCompletion();

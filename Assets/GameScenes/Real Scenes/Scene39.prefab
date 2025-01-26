@@ -76,11 +76,11 @@ MonoBehaviour:
   - Interaction:
       From: 1
       To: 6
-    ToScene: {fileID: 7867927460315108408, guid: f2f7b6aaaabeecb4d894261980504e9a, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 8b44218c0ec94644787423ce0b5c9e01, type: 3}
   - Interaction:
       From: 3
       To: 1
-    ToScene: {fileID: 7867927460315108408, guid: 9e9cd05af43273340b9e4253ef77a37a, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: a00f70ef2d4450545aa53222f16d9374, type: 3}
   <IsEndingScene>k__BackingField: 0
   <Ending>k__BackingField: 0
 --- !u!114 &5533724558582664186
@@ -636,10 +636,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f87674f4a363928479b7052da0ee0c2a, type: 3}
-    - target: {fileID: 1181457856626835077, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 32e221a133e055c4fb0aa4ea69eda5ea, type: 3}
     - target: {fileID: 1369167168103960152, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
       propertyPath: m_Name
       value: Knight Bubble
@@ -652,18 +648,10 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 2016895527849224125, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
-    - target: {fileID: 2995283097971345489, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4847782419701692725, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 4847782419701692725, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
-    - target: {fileID: 6492589007664805133, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 56bc18c02095ba54e988b810bb3badcd, type: 3}
     - target: {fileID: 6865395280528488882, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -676,10 +664,6 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 8519669191243807552, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
-    - target: {fileID: 9140288970808620427, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 388e45f83d6061642b03f48ac344ac92, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

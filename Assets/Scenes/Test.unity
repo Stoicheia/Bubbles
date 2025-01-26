@@ -372,7 +372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &177615920
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2497,7 +2497,7 @@ MonoBehaviour:
   _activeScenePrefab: {fileID: 0}
   _isLocked: 0
   _anims: {fileID: 917386860}
-  _loadOnStart: {fileID: 7867927460315108408, guid: ad277a4e677c6e548a1c6d3239bea81d, type: 3}
+  _loadOnStart: {fileID: 7867927460315108408, guid: 1d22d0ce767a7d04da3f9847d89a80fd, type: 3}
 --- !u!4 &917386859
 Transform:
   m_ObjectHideFlags: 0
@@ -3510,11 +3510,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1685420617}
+  m_Father: {fileID: 1808748194}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 466.84998, y: 342.24994}
+  m_AnchoredPosition: {x: 650, y: -89.00003}
   m_SizeDelta: {x: 44.59, y: 42.57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1755327915 stripped
@@ -3696,6 +3696,7 @@ RectTransform:
   - {fileID: 1462193955}
   - {fileID: 1470150699}
   - {fileID: 1685420617}
+  - {fileID: 1734853677}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4546,20 +4547,21 @@ PrefabInstance:
       propertyPath: targetTransform
       value: 
       objectReference: {fileID: 1734853677}
+    - target: {fileID: 6441525698192171772, guid: ce3ac5b5328162a4a9da6b3d493037ba, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: f9105aa3860ee7640988e6812b072835, type: 2}
     - target: {fileID: 6444487091110716257, guid: ce3ac5b5328162a4a9da6b3d493037ba, type: 3}
       propertyPath: m_Name
       value: Tuto_01
       objectReference: {fileID: 0}
     - target: {fileID: 6444487091110716257, guid: ce3ac5b5328162a4a9da6b3d493037ba, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 581842640256587320, guid: ce3ac5b5328162a4a9da6b3d493037ba, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1734853677}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce3ac5b5328162a4a9da6b3d493037ba, type: 3}
 --- !u!1001 &2621419739869745322

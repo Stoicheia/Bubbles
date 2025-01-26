@@ -76,15 +76,15 @@ MonoBehaviour:
   - Interaction:
       From: 2
       To: 6
-    ToScene: {fileID: 7867927460315108408, guid: 406c67d77d6fb714e924233691ed2240, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 2eb9edd498f16fb46a437bf11fcbd99c, type: 3}
   - Interaction:
       From: 3
       To: 2
-    ToScene: {fileID: 7867927460315108408, guid: c8436beb0b599694b927e7ac5a1dc8b2, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: db989bf5cd0665f4f9176f5c3b351c53, type: 3}
   - Interaction:
       From: 4
       To: 2
-    ToScene: {fileID: 7867927460315108408, guid: 28fbc22d3a6672741b1e6384f9a9f8b2, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: f883fc68a8d3dc148874f4f29ea87b8d, type: 3}
   <IsEndingScene>k__BackingField: 0
   <Ending>k__BackingField: 0
 --- !u!114 &5533724558582664186
@@ -905,10 +905,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7552519706305971240}
     m_Modifications:
-    - target: {fileID: 894437125495167173, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 2c93f50dad73aa84caa1bf6a2e7c617e, type: 3}
     - target: {fileID: 2215762655205593779, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -917,10 +913,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2591592984767728623, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 388e45f83d6061642b03f48ac344ac92, type: 3}
     - target: {fileID: 2882592904228155457, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -929,10 +921,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dragon Bubble
       objectReference: {fileID: 0}
-    - target: {fileID: 3558062581985250231, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 4461bc8e63bac4f48b6ad8f76a75e088, type: 3}
     - target: {fileID: 3570877625477036989, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -1040,10 +1028,6 @@ PrefabInstance:
     - target: {fileID: 8918317591863349771, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9158172415922379667, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

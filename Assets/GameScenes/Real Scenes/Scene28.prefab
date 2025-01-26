@@ -76,19 +76,19 @@ MonoBehaviour:
   - Interaction:
       From: 1
       To: 3
-    ToScene: {fileID: 7867927460315108408, guid: a3f02f88b3bdce047bed06a3a296209c, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: a8ce3536791a25e4baa5df9f87064798, type: 3}
   - Interaction:
       From: 2
       To: 0
-    ToScene: {fileID: 7867927460315108408, guid: 0ca822bf892afcd42bfa1a4cee9ce460, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 58da7c132627b3e41aedb5bda68b580a, type: 3}
   - Interaction:
       From: 0
       To: 2
-    ToScene: {fileID: 7867927460315108408, guid: 0ca822bf892afcd42bfa1a4cee9ce460, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 58da7c132627b3e41aedb5bda68b580a, type: 3}
   - Interaction:
       From: 1
       To: 5
-    ToScene: {fileID: 7867927460315108408, guid: 99050b2be82b6f84a95332afe036ed35, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 3b810efdc584e0a46a4bea34af5ba4eb, type: 3}
   <IsEndingScene>k__BackingField: 0
   <Ending>k__BackingField: 0
 --- !u!114 &5533724558582664186
@@ -1116,7 +1116,7 @@ PrefabInstance:
     - target: {fileID: 155913571422077427, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c94c9c3b6c3341444b4c760fed7d41b1, type: 3}
+      objectReference: {fileID: 21300000, guid: 5191cc7c9c9b1b94ca6fcb1fb326ce9b, type: 3}
     - target: {fileID: 1107557770342103285, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1208,7 +1208,7 @@ PrefabInstance:
     - target: {fileID: 3895631579110688905, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c94c9c3b6c3341444b4c760fed7d41b1, type: 3}
+      objectReference: {fileID: 21300000, guid: 5191cc7c9c9b1b94ca6fcb1fb326ce9b, type: 3}
     - target: {fileID: 7417527824252152566, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1220,7 +1220,7 @@ PrefabInstance:
     - target: {fileID: 8920332327565371847, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c94c9c3b6c3341444b4c760fed7d41b1, type: 3}
+      objectReference: {fileID: 21300000, guid: 5191cc7c9c9b1b94ca6fcb1fb326ce9b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
