@@ -13,22 +13,22 @@ MonoBehaviour:
   m_Name: Scene24_D
   m_EditorClassIdentifier: 
   PrincessBubble:
-    PickupSprite: {fileID: 0}
+    PickupSprite: {fileID: 21300000, guid: f87674f4a363928479b7052da0ee0c2a, type: 3}
     ExtraSprites: []
   KnightBubble:
-    PickupSprite: {fileID: 0}
+    PickupSprite: {fileID: 21300000, guid: fd28f9f9a68108343869d5d924dbdf22, type: 3}
     ExtraSprites: []
   DragonBubble:
-    PickupSprite: {fileID: 0}
+    PickupSprite: {fileID: 21300000, guid: 81c961893002c9c4386ae0573d4a68a7, type: 3}
     ExtraSprites: []
   PrincessCharacter:
     Base: {fileID: 0}
-    Expression: {fileID: 21300000, guid: 80ca05d017b48a64baabdfcf2a868c75, type: 3}
+    Expression: {fileID: 21300000, guid: 31b28caf82d671442a9ba2c49a781342, type: 3}
   KnightCharacter:
-    Base: {fileID: 0}
-    Expression: {fileID: 21300000, guid: b960306a364bf0545981cfc927a88846, type: 3}
+    Base: {fileID: 21300000, guid: f7810d644d0308941bec9591a58f7fae, type: 3}
+    Expression: {fileID: 0}
   DragonCharacter:
     Base: {fileID: 0}
-    Expression: {fileID: 21300000, guid: 461497378c7deab43883ed9fb87bae5a, type: 3}
+    Expression: {fileID: 21300000, guid: 38bed20ac5af5914a85c4929f2039a31, type: 3}
   Environment:
     Item: {fileID: 0}

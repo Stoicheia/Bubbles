@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Scene7_D
   m_EditorClassIdentifier: 
   PrincessBubble:
-    PickupSprite: {fileID: 0}
-    ExtraSprites: []
+    PickupSprite: {fileID: 21300000, guid: 724e5305732226544a94fbdee66d4110, type: 3}
+    ExtraSprites:
+    - {fileID: 21300000, guid: 2b88b7803dc03eb4db42b43ba1660550, type: 3}
+    - {fileID: 21300000, guid: 20ca79959feb3c040ba925c5766df12d, type: 3}
   KnightBubble:
     PickupSprite: {fileID: 0}
     ExtraSprites: []
@@ -23,12 +25,12 @@ MonoBehaviour:
     ExtraSprites: []
   PrincessCharacter:
     Base: {fileID: 0}
-    Expression: {fileID: 21300000, guid: 80ca05d017b48a64baabdfcf2a868c75, type: 3}
+    Expression: {fileID: 21300000, guid: 0adcf8aee533f6841a4a650af18916e7, type: 3}
   KnightCharacter:
     Base: {fileID: 0}
-    Expression: {fileID: 21300000, guid: b960306a364bf0545981cfc927a88846, type: 3}
+    Expression: {fileID: 21300000, guid: 0f8addf5ef75e394ca8d07123c8cad09, type: 3}
   DragonCharacter:
     Base: {fileID: 0}
     Expression: {fileID: 21300000, guid: 461497378c7deab43883ed9fb87bae5a, type: 3}
   Environment:
-    Item: {fileID: 0}
+    Item: {fileID: 21300000, guid: 803a6bbd1a8d189479e8435497726b93, type: 3}
