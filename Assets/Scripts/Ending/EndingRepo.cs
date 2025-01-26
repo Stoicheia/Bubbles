@@ -11,7 +11,7 @@ namespace Ending
 
         public EndingAsset GetEndingAsset(int number)
         {
-            return Endings[number];
+            return Endings[number - 1];
         }
 
         private void OnValidate()

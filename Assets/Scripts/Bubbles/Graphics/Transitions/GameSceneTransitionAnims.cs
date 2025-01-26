@@ -38,9 +38,13 @@ namespace Bubbles.Graphics.Transitions
         {
             StartCoroutine(ChainTransition(fromInteraction, toScene));
         }
-        
         private readonly List<SlotID> _naturalOrder = 
-            new List<SlotID>() {SlotID.Bubble1, SlotID.Bubble2, SlotID.Bubble3, SlotID.Char1, SlotID.Char2, SlotID.Char3, SlotID.Environment};
+            new List<SlotID>() {SlotID.Char1, SlotID.Char2, SlotID.Char3, SlotID.Bubble1, SlotID.Bubble2, SlotID.Bubble3, SlotID.Environment};
+
+        private bool IsCharacter(SlotID id)
+        {
+            return id == SlotID.Char1 || id == SlotID.Char2 || id == SlotID.Char3;
+        }
 
         private IEnumerator ChainTransition(SceneInteraction fromInteraction, GameScene toScene)
         {
@@ -62,8 +66,12 @@ namespace Bubbles.Graphics.Transitions
             {
                 PanelField field = _sceneManager.LoadScenePanel(toScene, id);
                 PanelPopTransition anim = field.GetComponent<PanelPopTransition>();
-                anim.DisappearImmediately();
-                seqs.Add(StartCoroutine(anim.TransitionInSeq(_easeIn, _easeOut, _duration)));
+                if (!IsCharacter(id))
+                {
+                    anim.DisappearImmediately();
+                    seqs.Add(StartCoroutine(anim.TransitionInSeq(_easeIn, _easeOut, _duration)));
+                }
+
                 OnPop?.Invoke(id, field.ActivePanelInstance);
             }
             yield return new WaitForSeconds(_gapBetweenPopsSecs);
@@ -78,8 +86,12 @@ namespace Bubbles.Graphics.Transitions
                 if (!samePanelKinda)
                 {
                     PanelPopTransition anim = field.GetComponent<PanelPopTransition>();
-                    anim.DisappearImmediately();
-                    StartCoroutine(anim.TransitionInSeq(_easeIn, _easeOut, _duration));
+                    if (!IsCharacter(id))
+                    {
+                        anim.DisappearImmediately();
+                        StartCoroutine(anim.TransitionInSeq(_easeIn, _easeOut, _duration));
+                    }
+
                     OnPop?.Invoke(id, field.ActivePanelInstance);
                     yield return new WaitForSeconds(_gapBetweenPopsSecs);
                 }
