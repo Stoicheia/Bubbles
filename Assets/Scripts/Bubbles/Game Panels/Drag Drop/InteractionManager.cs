@@ -65,7 +65,15 @@ namespace Bubbles.InteractableInput
 
                 if (_panelUnderMouse != null)
                 {
-                    _panelUnderMouse.SetHighlight(HighlightState.Disabled);
+                    if (!_showValidInteractions)
+                    {
+                        _panelUnderMouse.SetHighlight(HighlightState.Disabled);
+                    }
+                    else
+                    {
+                        bool isValid = GetInteractablePanels(currentlyDragging).Contains(_panelUnderMouse);
+                        _panelUnderMouse.SetHighlight(isValid ? HighlightState.CanInteract : HighlightState.Disabled);
+                    }
                 }
             }
 

@@ -74,9 +74,9 @@ MonoBehaviour:
     Panel: {fileID: 5532759164316367414}
   _transitions:
   - Interaction:
-      From: 0
-      To: 1
-    ToScene: {fileID: 7867927460315108408, guid: 00f6123accc58854f9c08221e4994c1c, type: 3}
+      From: 1
+      To: 6
+    ToScene: {fileID: 7867927460315108408, guid: efeebdfed9f60004b838af4bd0b06e18, type: 3}
   <IsEndingScene>k__BackingField: 0
   <Ending>k__BackingField: 0
 --- !u!114 &8449528464864073450

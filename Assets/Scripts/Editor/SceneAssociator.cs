@@ -27,9 +27,23 @@ namespace Bubbles.GamePanels.Automater
         [SerializeField] private string _newEndingPrefix;
         [SerializeField] private string _newSceneFolder;
 
+        [Button(ButtonSizes.Gigantic)]
+        public void Rebuild()
+        {
+            ZipScenes();
+            CreateScenesFromScriptables();
+        }
+
         [Button(ButtonSizes.Large)]
         public void ZipScenes()
         {
+            string[] existingSceneFiles = Directory.GetFiles(_newSceneFolder, "*.prefab", SearchOption.AllDirectories);
+            foreach (string file in existingSceneFiles)
+            {
+                AssetDatabase.DeleteAsset(file);
+            }
+            AssetDatabase.SaveAssets();
+            
             string[] oldSceneFiles = Directory.GetFiles(_oldSceneFolder, "*.prefab", SearchOption.TopDirectoryOnly);
             Dictionary<int, List<SceneTransitionData>> interactions = new Dictionary<int, List<SceneTransitionData>>();
             // endings are negative
