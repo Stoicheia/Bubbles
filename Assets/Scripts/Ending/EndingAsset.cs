@@ -8,5 +8,6 @@ namespace Ending
         public int Number;
         public Sprite Graphic;
         [TextArea(2, 8)] public string Text;
+        public bool IsComplete;
     }
 }
