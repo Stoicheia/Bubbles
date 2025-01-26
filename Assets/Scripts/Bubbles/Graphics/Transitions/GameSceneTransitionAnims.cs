@@ -72,19 +72,11 @@ namespace Bubbles.Graphics.Transitions
                 bool samePanelKinda = oldPanel.IsSameAs(newPanel);
                 if (!samePanelKinda)
                 {
-                    if (id != SlotID.Char3)
-                    {
-                        PanelPopTransition anim = field.GetComponent<PanelPopTransition>();
-                        anim.DisappearImmediately();
-                        StartCoroutine(anim.TransitionInSeq(_easeIn, _easeOut, _duration));
-                        OnPop?.Invoke(id, field.ActivePanelInstance);
-                        yield return new WaitForSeconds(_gapBetweenPopsSecs);
-                    }
-
-                    else
-                    {
-                        yield return new WaitForSeconds(_gapBetweenPopsSecs/2);
-                    }
+                    PanelPopTransition anim = field.GetComponent<PanelPopTransition>();
+                    anim.DisappearImmediately();
+                    StartCoroutine(anim.TransitionInSeq(_easeIn, _easeOut, _duration));
+                    OnPop?.Invoke(id, field.ActivePanelInstance);
+                    yield return new WaitForSeconds(_gapBetweenPopsSecs);
                 }
             }
             _sceneManager.SetActiveScene(toScene);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Bubbles.GamePanels;
 using Bubbles.Graphics.Transitions;
 using Bubbles.InteractableInput;
@@ -51,14 +52,18 @@ namespace Audio
         [SerializeField] private ExpressionAudio _rampageD;
         [SerializeField] private ExpressionAudio _sadD;
         [SerializeField] private ExpressionAudio _sleepD;
+        [SerializeField] private ExpressionAudio _confusedD;
+        
+        private List<ExpressionAudio> _princessExpressions = new List<ExpressionAudio>();
+        private List<ExpressionAudio> _knightExpressions = new List<ExpressionAudio>();
+        private List<ExpressionAudio> _dragonExpressions = new List<ExpressionAudio>();
 
         [Serializable]
         struct ExpressionAudio
         {
-            public List<string> ExpressionNameContains;
+            public List<Sprite> ExpressionSprites;
             public AudioClip Clip;
         }
-        
 
         private void Awake()
         {
@@ -73,6 +78,10 @@ namespace Audio
             }
             _musicSource.clip = _mainMusic;
             _musicSource.Play();
+            
+            _princessExpressions = new List<ExpressionAudio>(){_blushingP, _confidentP, _curiousP, _happyP, _sadP, _scaredP, _sleepingP};
+            _knightExpressions = new List<ExpressionAudio>(){_blushingK, _confusedK, _deadK, _happyK, _heroicK, _jealousK, _undeadK, _worriedK};
+            _dragonExpressions = new List<ExpressionAudio>(){_blushingD, _dieD, _rampageD, _happyD, _sadD, _sleepD, _confusedD};
         }
 
         private void OnEnable()
@@ -87,7 +96,31 @@ namespace Audio
         private void HandlePop(SlotID slotID, Panel panel)
         {
             _sfxSource.PlayOneShot(_bubbleNew);
-            panel.GetAssociatedSpriteNames().ForEach(x => Debug.Log(x));
+            List<Sprite> assocs = panel.GetAssociatedSprites();
+            Dictionary<SlotID, List<ExpressionAudio>> expressions = new Dictionary<SlotID, List<ExpressionAudio>>()
+            {
+                {SlotID.Char1, _princessExpressions},
+                {SlotID.Char2, _knightExpressions},
+                {SlotID.Char3, _dragonExpressions}
+            };
+
+            if (expressions.ContainsKey(slotID))
+            {
+                PlayAudioOf(assocs, expressions[slotID]);
+            }
+        }
+
+        private void PlayAudioOf(List<Sprite> given, List<ExpressionAudio> checkAgainst)
+        {
+            foreach (ExpressionAudio expression in checkAgainst)
+            {
+                if (given.Any(x => expression.ExpressionSprites.Contains(x)))
+                {
+                    _sfxSource.PlayOneShot(expression.Clip);
+                    return;
+                }
+            }
+            Debug.LogWarning($"No audio clip found for current expression.");
         }
 
         private void HandleInteract(SceneInteraction interaction, bool success)

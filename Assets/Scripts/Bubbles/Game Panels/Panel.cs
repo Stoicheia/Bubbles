@@ -54,10 +54,10 @@ namespace Bubbles.GamePanels
             return other._principalSprites.All(_principalSprites.Contains) && _principalSprites.All(other._principalSprites.Contains);
         }
         
-        public List<string> GetAssociatedSpriteNames()
+        public List<Sprite> GetAssociatedSprites()
         {
             List<Image> associatedImages = GetComponentsInChildren<Image>().ToList();
-            List<string> associatedSpriteNames = associatedImages.Where(x =>x.sprite).Select(x => x.sprite.name).ToList();
+            List<Sprite> associatedSpriteNames = associatedImages.Where(x =>x.sprite).Select(x => x.sprite).ToList();
             return associatedSpriteNames;
         }
     }

@@ -3127,28 +3127,93 @@ MonoBehaviour:
   _placeOnTable: {fileID: 8300000, guid: a4ce95941bf154e46832bedcabddbd6c, type: 3}
   _bubbleIn: {fileID: 8300000, guid: 167f8ee700a3d0e4ca5d3241c4056d9d, type: 3}
   _bubbleOut: {fileID: 8300000, guid: 77b91a6a0efc44d40a7009266dd1cb44, type: 3}
-  _bubbleNew: {fileID: 0}
-  _blushingP: {fileID: 0}
-  _confidentP: {fileID: 0}
-  _curiousP: {fileID: 0}
-  _happyP: {fileID: 0}
-  _sadP: {fileID: 0}
-  _scaredP: {fileID: 0}
-  _sleepingP: {fileID: 0}
-  _blushingK: {fileID: 0}
-  _confusedK: {fileID: 0}
-  _deadK: {fileID: 0}
-  _happyK: {fileID: 0}
-  _heroicK: {fileID: 0}
-  _jealousK: {fileID: 0}
-  _undeadK: {fileID: 0}
-  _worriedK: {fileID: 0}
-  _blushingD: {fileID: 0}
-  _dieD: {fileID: 0}
-  _happyD: {fileID: 0}
-  _rampageD: {fileID: 0}
-  _sadD: {fileID: 0}
-  _sleepD: {fileID: 0}
+  _bubbleNew: {fileID: 8300000, guid: dd3c18912905da84c8d1636274520652, type: 3}
+  _blushingP:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 1f6771d439672244aa8aa30aed2ba492, type: 3}
+    Clip: {fileID: 8300000, guid: 40e1813118b6d8c4a8a38d89c66280d8, type: 3}
+  _confidentP:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: e78736f0e5447ac48ad1a62b0e5f4c14, type: 3}
+    Clip: {fileID: 8300000, guid: c83741a83cb7ef5458263fba021731e8, type: 3}
+  _curiousP:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 09b17ff8d6ebfd34ab29f1c555fd8c30, type: 3}
+    Clip: {fileID: 8300000, guid: 75b7aecf26ac37a4b9d707a88b5f905d, type: 3}
+  _happyP:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 0adcf8aee533f6841a4a650af18916e7, type: 3}
+    Clip: {fileID: 8300000, guid: 770ed61b308b12944a7f6784477b9fc2, type: 3}
+  _sadP:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 31b28caf82d671442a9ba2c49a781342, type: 3}
+    Clip: {fileID: 8300000, guid: d21876c19260d3d42874a60b14a92a5e, type: 3}
+  _scaredP:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 7251867922281914e90c22df84f7832c, type: 3}
+    Clip: {fileID: 8300000, guid: 653789860e75f184cabab0967b54685d, type: 3}
+  _sleepingP:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 12176617915787947b621a682e7a05fd, type: 3}
+    Clip: {fileID: 8300000, guid: 883dc91866a4f024d827b56974257b61, type: 3}
+  _blushingK:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 5fc846632437e734584114ceaac6a7fd, type: 3}
+    Clip: {fileID: 8300000, guid: d10ff261c33f938488e6d373fbdf1471, type: 3}
+  _confusedK:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: bbe7d113401e1e14393121eb4f615f5b, type: 3}
+    Clip: {fileID: 8300000, guid: 6196d8ce4024f1a49b78746a90487858, type: 3}
+  _deadK:
+    ExpressionSprites: []
+    Clip: {fileID: 8300000, guid: 4749afbae3b9a7f4eaaf28fd3dd22031, type: 3}
+  _happyK:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 0f8addf5ef75e394ca8d07123c8cad09, type: 3}
+    Clip: {fileID: 8300000, guid: 9ac0fccd84a9c634aaaade9062760025, type: 3}
+  _heroicK:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 9a5caa841299f044e973e821e3622935, type: 3}
+    Clip: {fileID: 8300000, guid: fdbc13017f048634abc715ff27bec824, type: 3}
+  _jealousK:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: a57a13db96e355a4d8259bad3b185bb0, type: 3}
+    Clip: {fileID: 8300000, guid: e5990588b034adf4292760497476ff1b, type: 3}
+  _undeadK:
+    ExpressionSprites: []
+    Clip: {fileID: 8300000, guid: 7dd25773ced6cc148ada6b0cb01f0c14, type: 3}
+  _worriedK:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 5cc2ddc2bbbc02240a807257c6e1436a, type: 3}
+    Clip: {fileID: 8300000, guid: 0247bae3a518fb04d9e0014cd4e9d9cb, type: 3}
+  _blushingD:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 37b519a1576520a4fae768db6869370d, type: 3}
+    Clip: {fileID: 8300000, guid: c4feef160211a094d81dad4faab7d9dd, type: 3}
+  _dieD:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: d445aa6cc73e67e40beb76ee830b7901, type: 3}
+    Clip: {fileID: 8300000, guid: 995c766e6a7096843b5ea188a06428d6, type: 3}
+  _happyD:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 86ac0e66ed4f0ee4b8fcdfa831b0c7aa, type: 3}
+    Clip: {fileID: 8300000, guid: 27fd1a9b9c303be4587557318e3ba437, type: 3}
+  _rampageD:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 38bed20ac5af5914a85c4929f2039a31, type: 3}
+    Clip: {fileID: 8300000, guid: 201df123075bc444ebbb1b91315de5c4, type: 3}
+  _sadD:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 92592f027c0050b4bb6f0e37d0e23074, type: 3}
+    Clip: {fileID: 8300000, guid: e7fd2d885dcc5bb4d98e4a93a0ff3572, type: 3}
+  _sleepD:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: a94f194b2a9c7084ab8f0f5ba0009141, type: 3}
+    Clip: {fileID: 8300000, guid: a5aa84bd4886a174ca889a95e2159320, type: 3}
+  _confusedD:
+    ExpressionSprites:
+    - {fileID: 21300000, guid: 311c7224d635ed748ad92af7056daf71, type: 3}
+    Clip: {fileID: 8300000, guid: c4feef160211a094d81dad4faab7d9dd, type: 3}
 --- !u!4 &1524078123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7900839445308887435, guid: f080bec862da79a4e843ec79b4843b12, type: 3}
