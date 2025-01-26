@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405396cd0df7454cbd296d3252d649ea, type: 3}
+  m_Name: Scene12_D
+  m_EditorClassIdentifier: 
+  PrincessBubble:
+    PickupSprite: {fileID: 0}
+    ExtraSprites: []
+  KnightBubble:
+    PickupSprite: {fileID: 21300000, guid: 667d18c5566659942bf873099d88da25, type: 3}
+    ExtraSprites:
+    - {fileID: 21300000, guid: a8a8a07f9491ec94bbf4757c07f9fe97, type: 3}
+  DragonBubble:
+    PickupSprite: {fileID: 21300000, guid: 318cff97801afe948ab8747993bd0af8, type: 3}
+    ExtraSprites: []
+  PrincessCharacter:
+    Base: {fileID: 0}
+    Expression: {fileID: 21300000, guid: 31b28caf82d671442a9ba2c49a781342, type: 3}
+  KnightCharacter:
+    Base: {fileID: 0}
+    Expression: {fileID: 21300000, guid: bbe7d113401e1e14393121eb4f615f5b, type: 3}
+  DragonCharacter:
+    Base: {fileID: 0}
+    Expression: {fileID: 21300000, guid: a94f194b2a9c7084ab8f0f5ba0009141, type: 3}
+  Environment:
+    Item: {fileID: 0}

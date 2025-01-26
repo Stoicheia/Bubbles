@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7552519706305971240}
   - component: {fileID: 7867927460315108408}
+  - component: {fileID: 6742569426245257666}
   m_Layer: 5
   m_Name: Scene29
   m_TagString: Untagged
@@ -90,6 +91,25 @@ MonoBehaviour:
     ToScene: {fileID: 7867927460315108408, guid: 52fc79b43bdb91c4aa998b86b030eeb9, type: 3}
   <IsEndingScene>k__BackingField: 0
   <Ending>k__BackingField: 0
+--- !u!114 &6742569426245257666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4181388606739440563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34077f6726d4f18a1a0cf9fb2d06afa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _princessBubble: {fileID: 0}
+  _knightBubble: {fileID: 0}
+  _dragonBubble: {fileID: 0}
+  _princessCharacter: {fileID: 0}
+  _knightCharacter: {fileID: 0}
+  _dragonCharacter: {fileID: 0}
+  _itemOnGround: {fileID: 0}
 --- !u!1 &5618044577426500976
 GameObject:
   m_ObjectHideFlags: 0
