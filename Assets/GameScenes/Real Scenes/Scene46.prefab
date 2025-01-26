@@ -76,11 +76,11 @@ MonoBehaviour:
   - Interaction:
       From: 2
       To: 6
-    ToScene: {fileID: 7867927460315108408, guid: 1daf2bfff773e384591dbabb98fdc8be, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 3f21fb01072c6044da62ca4ae6082065, type: 3}
   - Interaction:
       From: 3
       To: 2
-    ToScene: {fileID: 7867927460315108408, guid: c8996693ea217ae4ab748d17402cee37, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 3716ad3cf91b8604e9d4e27b5e4dadb5, type: 3}
   <IsEndingScene>k__BackingField: 0
   <Ending>k__BackingField: 0
 --- !u!114 &5533724558582664186
@@ -916,7 +916,7 @@ PrefabInstance:
     - target: {fileID: 2591592984767728623, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2c93f50dad73aa84caa1bf6a2e7c617e, type: 3}
+      objectReference: {fileID: 21300000, guid: 5e9d0609b4b786d4f8e9af4dcec0910b, type: 3}
     - target: {fileID: 2882592904228155457, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
       propertyPath: serializationData.Prefab
       value: 

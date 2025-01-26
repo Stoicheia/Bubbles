@@ -76,15 +76,15 @@ MonoBehaviour:
   - Interaction:
       From: 6
       To: 5
-    ToScene: {fileID: 7867927460315108408, guid: 0f6515561584c964bbd7f3fdf9f4e92b, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 15c688a0577bce84183563dfd2b34d41, type: 3}
   - Interaction:
       From: 6
       To: 4
-    ToScene: {fileID: 7867927460315108408, guid: 089dbaec8744eba4e8ab125a20aac4d0, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 2e9055a4aeaac504cb14345c4dd92af6, type: 3}
   - Interaction:
       From: 6
       To: 3
-    ToScene: {fileID: 7867927460315108408, guid: ee8532714926e334d850300e73a21140, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 8cb66d205c325da409aa6e6df3222d3c, type: 3}
   <IsEndingScene>k__BackingField: 0
   <Ending>k__BackingField: 0
 --- !u!114 &5533724558582664186
@@ -1068,7 +1068,7 @@ PrefabInstance:
     - target: {fileID: 155913571422077427, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5191cc7c9c9b1b94ca6fcb1fb326ce9b, type: 3}
+      objectReference: {fileID: 21300000, guid: c94c9c3b6c3341444b4c760fed7d41b1, type: 3}
     - target: {fileID: 1107557770342103285, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1160,7 +1160,7 @@ PrefabInstance:
     - target: {fileID: 3895631579110688905, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5191cc7c9c9b1b94ca6fcb1fb326ce9b, type: 3}
+      objectReference: {fileID: 21300000, guid: c94c9c3b6c3341444b4c760fed7d41b1, type: 3}
     - target: {fileID: 7417527824252152566, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1172,7 +1172,7 @@ PrefabInstance:
     - target: {fileID: 8920332327565371847, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5191cc7c9c9b1b94ca6fcb1fb326ce9b, type: 3}
+      objectReference: {fileID: 21300000, guid: c94c9c3b6c3341444b4c760fed7d41b1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

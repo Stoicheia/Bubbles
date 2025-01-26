@@ -76,15 +76,15 @@ MonoBehaviour:
   - Interaction:
       From: 6
       To: 3
-    ToScene: {fileID: 7867927460315108408, guid: b016651ad12ec3843b5010e87e2211b4, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 85aa6702f0191574a9cededd00ae2d82, type: 3}
   - Interaction:
       From: 6
       To: 4
-    ToScene: {fileID: 7867927460315108408, guid: 5d406383190286644acc67f57d6a5218, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: afaedc254f745fb44a087f0ed36141bd, type: 3}
   - Interaction:
       From: 6
       To: 5
-    ToScene: {fileID: 7867927460315108408, guid: 32c05f74b0ac169439b501c89882e6e5, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 140df60d1ac771a48ba11f367a93245d, type: 3}
   <IsEndingScene>k__BackingField: 0
   <Ending>k__BackingField: 0
 --- !u!114 &5533724558582664186
@@ -189,10 +189,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7552519706305971240}
     m_Modifications:
-    - target: {fileID: 1102804406991181381, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1341166109840536019, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.87626
@@ -224,11 +220,11 @@ PrefabInstance:
     - target: {fileID: 4217754147777489972, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 388e45f83d6061642b03f48ac344ac92, type: 3}
     - target: {fileID: 4857960548572333056, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 388e45f83d6061642b03f48ac344ac92, type: 3}
     - target: {fileID: 5470748935303212495, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
       propertyPath: _background
       value: 

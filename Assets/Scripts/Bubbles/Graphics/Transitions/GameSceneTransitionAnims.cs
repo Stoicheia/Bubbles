@@ -38,7 +38,7 @@ namespace Bubbles.Graphics.Transitions
         }
         
         private readonly List<SlotID> _naturalOrder = 
-            new List<SlotID>() {SlotID.Bubble1, SlotID.Bubble2, SlotID.Bubble3, SlotID.Char1, SlotID.Char2, SlotID.Char3, SlotID.Environment};
+            new List<SlotID>() {SlotID.Char1, SlotID.Char2, SlotID.Char3, SlotID.Bubble1, SlotID.Bubble2, SlotID.Bubble3, SlotID.Environment};
 
         private bool IsCharacter(SlotID id)
         {
@@ -81,6 +81,7 @@ namespace Bubbles.Graphics.Transitions
                 bool samePanelKinda = oldPanel.IsSameAs(newPanel);
                 if (!samePanelKinda)
                 {
+                    
                     if (!IsCharacter(id))
                     {
                         PanelPopTransition anim = field.GetComponent<PanelPopTransition>();
@@ -89,7 +90,6 @@ namespace Bubbles.Graphics.Transitions
                     }
 
                     OnPop?.Invoke(id, field.ActivePanelInstance);
-
                     yield return new WaitForSeconds(_gapBetweenPopsSecs);
                 }
             }

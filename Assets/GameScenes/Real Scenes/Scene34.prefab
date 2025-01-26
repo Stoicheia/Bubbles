@@ -76,11 +76,11 @@ MonoBehaviour:
   - Interaction:
       From: 5
       To: 0
-    ToScene: {fileID: 7867927460315108408, guid: a00f70ef2d4450545aa53222f16d9374, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 80807cb39ad2c8a4c96cb05249c89d7b, type: 3}
   - Interaction:
       From: 0
       To: 6
-    ToScene: {fileID: 7867927460315108408, guid: b33741e5e71ffb14db52b7589f8d7147, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: e81852beed899cf468a94ee4b220a6aa, type: 3}
   <IsEndingScene>k__BackingField: 0
   <Ending>k__BackingField: 0
 --- !u!114 &5533724558582664186
@@ -392,6 +392,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7552519706305971240}
     m_Modifications:
+    - target: {fileID: 283472280371441487, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2772900514103573793, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -412,6 +416,10 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 6053565930905410117, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
+    - target: {fileID: 6053999796104200446, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c93f50dad73aa84caa1bf6a2e7c617e, type: 3}
     - target: {fileID: 6583356084364446333, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -504,10 +512,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8565058616976912941, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 388e45f83d6061642b03f48ac344ac92, type: 3}
     - target: {fileID: 8934496143677846421, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 5e2086b931ac653489e45e0c2908a0ae, type: 3}
+    - target: {fileID: 9048337860158711560, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2b88b7803dc03eb4db42b43ba1660550, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
