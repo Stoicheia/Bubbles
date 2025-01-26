@@ -76,19 +76,19 @@ MonoBehaviour:
   - Interaction:
       From: 1
       To: 5
-    ToScene: {fileID: 7867927460315108408, guid: 5aa3b83b07f6edd429966cb12cef80b7, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 23146d34c3ef0dc40b7a6a618d920a8f, type: 3}
   - Interaction:
       From: 0
       To: 2
-    ToScene: {fileID: 7867927460315108408, guid: a7f6b67bb0be39640838d35c6b745359, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 5929fc3c2ac97974aa1328abaaa0fd04, type: 3}
   - Interaction:
       From: 2
       To: 0
-    ToScene: {fileID: 7867927460315108408, guid: a7f6b67bb0be39640838d35c6b745359, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 5929fc3c2ac97974aa1328abaaa0fd04, type: 3}
   - Interaction:
       From: 4
       To: 6
-    ToScene: {fileID: 7867927460315108408, guid: 870427dac6167e44fa90f6ed0b33ce87, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 41894d6210043c14fb07809bb5b490c7, type: 3}
   <IsEndingScene>k__BackingField: 0
   <Ending>k__BackingField: 0
 --- !u!114 &5533724558582664186
@@ -193,6 +193,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7552519706305971240}
     m_Modifications:
+    - target: {fileID: 1102804406991181381, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3777908642140794571, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
       propertyPath: _overrideSpriteInTransit
       value: 
@@ -204,7 +208,7 @@ PrefabInstance:
     - target: {fileID: 4217754147777489972, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 318cff97801afe948ab8747993bd0af8, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5470748935303212495, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
       propertyPath: _background
       value: 
@@ -374,6 +378,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7552519706305971240}
     m_Modifications:
+    - target: {fileID: 1097363172135344655, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5879342e0a181ae4ba90144773f19a87, type: 3}
+    - target: {fileID: 2772900514103573793, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4097715739789046945, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -381,6 +393,10 @@ PrefabInstance:
     - target: {fileID: 4764280027649899028, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
       propertyPath: m_Name
       value: Princess Bubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058762150998221238, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5084683173005379143, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
       propertyPath: serializationData.Prefab
@@ -390,6 +406,10 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 6053565930905410117, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
+    - target: {fileID: 6189788457359819862, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 32e221a133e055c4fb0aa4ea69eda5ea, type: 3}
     - target: {fileID: 6583356084364446333, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -614,18 +634,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f87674f4a363928479b7052da0ee0c2a, type: 3}
+    - target: {fileID: 1181457856626835077, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 32e221a133e055c4fb0aa4ea69eda5ea, type: 3}
     - target: {fileID: 1369167168103960152, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
       propertyPath: m_Name
       value: Knight Bubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526086165767104761, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2016895527849224125, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 2016895527849224125, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
+    - target: {fileID: 2995283097971345489, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4847782419701692725, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 4847782419701692725, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
+    - target: {fileID: 6492589007664805133, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 20ca79959feb3c040ba925c5766df12d, type: 3}
     - target: {fileID: 6865395280528488882, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -638,6 +674,10 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 8519669191243807552, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
+    - target: {fileID: 9140288970808620427, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f87674f4a363928479b7052da0ee0c2a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -769,7 +809,7 @@ PrefabInstance:
     - target: {fileID: 8432181979380965903, guid: 0b244a8d88fa16342a8fb12e4f99f750, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 31b28caf82d671442a9ba2c49a781342, type: 3}
+      objectReference: {fileID: 21300000, guid: 1f6771d439672244aa8aa30aed2ba492, type: 3}
     - target: {fileID: 8877145629198445127, guid: 0b244a8d88fa16342a8fb12e4f99f750, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -902,7 +942,7 @@ PrefabInstance:
     - target: {fileID: 5026982636535391720, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0daef1075287b8548824e57ffd5b8dd6, type: 3}
+      objectReference: {fileID: 21300000, guid: 5879342e0a181ae4ba90144773f19a87, type: 3}
     - target: {fileID: 6894534934340143804, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -918,7 +958,7 @@ PrefabInstance:
     - target: {fileID: 8523363444408197811, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ba652b4851014e64ab7bb4e0d54bda96, type: 3}
+      objectReference: {fileID: 21300000, guid: 20ca79959feb3c040ba925c5766df12d, type: 3}
     - target: {fileID: 8918317591863349771, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1134,7 +1174,7 @@ PrefabInstance:
     - target: {fileID: 7417527824252152566, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 311c7224d635ed748ad92af7056daf71, type: 3}
+      objectReference: {fileID: 21300000, guid: 37b519a1576520a4fae768db6869370d, type: 3}
     - target: {fileID: 8443906342785952568, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: _overrideSpriteInTransit
       value: 
@@ -1243,7 +1283,7 @@ PrefabInstance:
     - target: {fileID: 1551271820472172529, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0f8addf5ef75e394ca8d07123c8cad09, type: 3}
+      objectReference: {fileID: 21300000, guid: a57a13db96e355a4d8259bad3b185bb0, type: 3}
     - target: {fileID: 3060591170121011867, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
       propertyPath: m_Name
       value: K9ght Char
@@ -1252,6 +1292,34 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 3426135662995798118, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 482.13004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 760.81506
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -14
+      objectReference: {fileID: 0}
     - target: {fileID: 4107556887181824473, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
       propertyPath: <ID>k__BackingField
       value: 4

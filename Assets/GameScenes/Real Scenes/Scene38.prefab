@@ -76,11 +76,11 @@ MonoBehaviour:
   - Interaction:
       From: 5
       To: 1
-    ToScene: {fileID: 7867927460315108408, guid: 079cdb15a75474043ac2d335c68624cd, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: bd5561e7be96ba948ae14c08bda1bdba, type: 3}
   - Interaction:
       From: 1
       To: 6
-    ToScene: {fileID: 7867927460315108408, guid: acc812f08f47f0d42abd4b84e967dca2, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: ec0b405b8fe42a34793e8d2bce230676, type: 3}
   <IsEndingScene>k__BackingField: 0
   <Ending>k__BackingField: 0
 --- !u!114 &5533724558582664186
@@ -185,6 +185,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7552519706305971240}
     m_Modifications:
+    - target: {fileID: 1102804406991181381, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3777908642140794571, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
       propertyPath: _overrideSpriteInTransit
       value: 
@@ -196,7 +200,7 @@ PrefabInstance:
     - target: {fileID: 4217754147777489972, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 318cff97801afe948ab8747993bd0af8, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5470748935303212495, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
       propertyPath: _background
       value: 
@@ -366,6 +370,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7552519706305971240}
     m_Modifications:
+    - target: {fileID: 2772900514103573793, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4097715739789046945, guid: 2f1df441d7218834ba57be239ac5ab63, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -610,6 +618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knight Bubble
       objectReference: {fileID: 0}
+    - target: {fileID: 1526086165767104761, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2016895527849224125, guid: dbcb1d8b49e24e241bfb7ca296bfd389, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -761,7 +773,7 @@ PrefabInstance:
     - target: {fileID: 8432181979380965903, guid: 0b244a8d88fa16342a8fb12e4f99f750, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 31b28caf82d671442a9ba2c49a781342, type: 3}
+      objectReference: {fileID: 21300000, guid: 80ca05d017b48a64baabdfcf2a868c75, type: 3}
     - target: {fileID: 8877145629198445127, guid: 0b244a8d88fa16342a8fb12e4f99f750, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -897,7 +909,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0daef1075287b8548824e57ffd5b8dd6, type: 3}
     - target: {fileID: 6894534934340143804, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7432601145127617759, guid: 47dc54ef1dfd4144c8de8cd4296c7200, type: 3}
       propertyPath: serializationData.Prefab
@@ -1126,7 +1138,7 @@ PrefabInstance:
     - target: {fileID: 7417527824252152566, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 311c7224d635ed748ad92af7056daf71, type: 3}
+      objectReference: {fileID: 21300000, guid: 461497378c7deab43883ed9fb87bae5a, type: 3}
     - target: {fileID: 8443906342785952568, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: _overrideSpriteInTransit
       value: 
@@ -1235,7 +1247,7 @@ PrefabInstance:
     - target: {fileID: 1551271820472172529, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0f8addf5ef75e394ca8d07123c8cad09, type: 3}
+      objectReference: {fileID: 21300000, guid: b960306a364bf0545981cfc927a88846, type: 3}
     - target: {fileID: 3060591170121011867, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
       propertyPath: m_Name
       value: K9ght Char
@@ -1244,6 +1256,34 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 3426135662995798118, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 482.13004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 760.81506
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -14
+      objectReference: {fileID: 0}
     - target: {fileID: 4107556887181824473, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
       propertyPath: <ID>k__BackingField
       value: 4

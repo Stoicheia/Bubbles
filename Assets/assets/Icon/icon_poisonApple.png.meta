@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      icon_poisonApple_0: -1120172021821623897
+      icon_poisonApple_1: -3029396708234334954
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

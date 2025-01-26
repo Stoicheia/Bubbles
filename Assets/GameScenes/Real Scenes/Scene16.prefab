@@ -76,7 +76,7 @@ MonoBehaviour:
   - Interaction:
       From: 6
       To: 4
-    ToScene: {fileID: 7867927460315108408, guid: 6f1866618bb65f3489b7ba700a3f81e0, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 56f794c16378c164e8be206a42e53043, type: 3}
   <IsEndingScene>k__BackingField: 0
   <Ending>k__BackingField: 0
 --- !u!114 &5533724558582664186
@@ -1256,6 +1256,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4827145211500445315, guid: 1ab96bd7a2c33a14f87b1abbf951623f, type: 3}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 482.13004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 760.81506
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105402944194211450, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -14
+      objectReference: {fileID: 0}
     - target: {fileID: 4107556887181824473, guid: 2a75cee7848b524479c6bdae8584b792, type: 3}
       propertyPath: <ID>k__BackingField
       value: 4
