@@ -19,7 +19,7 @@ MonoBehaviour:
     PickupSprite: {fileID: 0}
     ExtraSprites: []
   DragonBubble:
-    PickupSprite: {fileID: 21300000, guid: 5879342e0a181ae4ba90144773f19a87, type: 3}
+    PickupSprite: {fileID: 21300000, guid: 56bc18c02095ba54e988b810bb3badcd, type: 3}
     ExtraSprites:
     - {fileID: 21300000, guid: 20ca79959feb3c040ba925c5766df12d, type: 3}
   PrincessCharacter:
@@ -29,7 +29,7 @@ MonoBehaviour:
     Base: {fileID: 0}
     Expression: {fileID: 21300000, guid: bbe7d113401e1e14393121eb4f615f5b, type: 3}
   DragonCharacter:
-    Base: {fileID: 0}
+    Base: {fileID: 21300000, guid: 5191cc7c9c9b1b94ca6fcb1fb326ce9b, type: 3}
     Expression: {fileID: 21300000, guid: 37b519a1576520a4fae768db6869370d, type: 3}
   Environment:
     Item: {fileID: 0}

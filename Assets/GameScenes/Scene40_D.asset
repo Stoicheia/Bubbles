@@ -23,12 +23,12 @@ MonoBehaviour:
     ExtraSprites: []
   PrincessCharacter:
     Base: {fileID: 0}
-    Expression: {fileID: 21300000, guid: 80ca05d017b48a64baabdfcf2a868c75, type: 3}
+    Expression: {fileID: 21300000, guid: 09b17ff8d6ebfd34ab29f1c555fd8c30, type: 3}
   KnightCharacter:
     Base: {fileID: 0}
-    Expression: {fileID: 21300000, guid: b960306a364bf0545981cfc927a88846, type: 3}
+    Expression: {fileID: 21300000, guid: 0f8addf5ef75e394ca8d07123c8cad09, type: 3}
   DragonCharacter:
     Base: {fileID: 0}
-    Expression: {fileID: 21300000, guid: 461497378c7deab43883ed9fb87bae5a, type: 3}
+    Expression: {fileID: 21300000, guid: a94f194b2a9c7084ab8f0f5ba0009141, type: 3}
   Environment:
-    Item: {fileID: 0}
+    Item: {fileID: 21300000, guid: 49e880a705d20164c8b55be6d179f35c, type: 3}
