@@ -95,6 +95,7 @@ namespace Bubbles.GamePanels.Automater
                 GameScene fromScene = numberToPrefab[fromSceneNumber];
                 fromScene.Transitions = transitions;
                 Debug.Log($"Set {transitions.Count} transitions for scene {fromScene.name}");
+                EditorUtility.SetDirty(fromScene);
             }
             
             AssetDatabase.SaveAssets();
