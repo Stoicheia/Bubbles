@@ -76,15 +76,15 @@ MonoBehaviour:
   - Interaction:
       From: 2
       To: 6
-    ToScene: {fileID: 7867927460315108408, guid: 17deda9762f5c26449fe065e0fdf6069, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 00eed462524682247974645b7228c5ad, type: 3}
   - Interaction:
       From: 4
       To: 0
-    ToScene: {fileID: 7867927460315108408, guid: c7cca08619fea4a42bcf862e5ffa608d, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: a3eb00f72e6756040a34d6dc8fe50eb6, type: 3}
   - Interaction:
       From: 5
       To: 0
-    ToScene: {fileID: 7867927460315108408, guid: 3a1ed39a000725a428383df0412dbea7, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 7ba3a0f8989dc984d91e7bd5468e22c2, type: 3}
   <IsEndingScene>k__BackingField: 0
   <Ending>k__BackingField: 0
 --- !u!114 &5533724558582664186

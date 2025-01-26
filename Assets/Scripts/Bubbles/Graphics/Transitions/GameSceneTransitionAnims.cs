@@ -8,6 +8,7 @@ using Ending;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using Sirenix.Utilities;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Bubbles.Graphics.Transitions
@@ -19,6 +20,7 @@ namespace Bubbles.Graphics.Transitions
         [OdinSerialize][ReadOnly] private Dictionary<SlotID, PanelField> _panelFields;
         [SerializeField] private GameSceneManager _sceneManager;
         [SerializeField] private EndingTransitioner _endingTransitioner;
+        [SerializeField] private RectTransform _overlayDuringTransition;
 
         [Header("Settings")]
         [SerializeField] private float _gapBetweenPopsSecs;
@@ -42,16 +44,19 @@ namespace Bubbles.Graphics.Transitions
 
         private IEnumerator ChainTransition(SceneInteraction fromInteraction, GameScene toScene)
         {
-           // _sceneManager.SetLock(true);
+            _sceneManager.SetLock(true);
             
             if (toScene.IsEndingScene)
             {
                 int endingNumber = toScene.Ending;
                 yield return _endingTransitioner.TransitionToEnding(endingNumber);
+                yield break;
             }
             
+            _overlayDuringTransition.gameObject.SetActive(true);
+            
             HashSet<SlotID> involvedIDs = new HashSet<SlotID>() {fromInteraction.From, fromInteraction.To};
-            HashSet<PanelField> involvedPanels = involvedIDs.Select(x => _panelFields[x]).ToHashSet();
+            HashSet<PanelField> involvedPanels = Enumerable.ToHashSet(involvedIDs.Select(x => _panelFields[x]));
             var seqs = new List<Coroutine>();
             foreach (SlotID id in involvedIDs)
             {
@@ -88,7 +93,8 @@ namespace Bubbles.Graphics.Transitions
             }
             else
             {
-               // _sceneManager.SetLock(false);
+                _sceneManager.SetLock(false);
+                _overlayDuringTransition.gameObject.SetActive(false);
             }
         }
     }
