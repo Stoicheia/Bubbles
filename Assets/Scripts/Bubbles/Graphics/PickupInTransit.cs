@@ -16,6 +16,7 @@ namespace Bubbles.Graphics
         [SerializeField] private Image _imageField;
         [SerializeField] private RectTransform _collisionField;
         [SerializeField] private DragInteractionHandler _pickupDragHandler;
+        [SerializeField] private float _universalScale = 0.7f;
 
         private RectTransform _imgTransform;
         private Vector2 _lastDragOffset;
@@ -42,7 +43,7 @@ namespace Bubbles.Graphics
             _imageField.enabled = true;
             _imageField.sprite = sprite;
             _imageField.SetNativeSize();
-            MatchSize(_imageField.rectTransform, _collisionField);
+            _collisionField.transform.localScale = Vector3.one * _universalScale;
         }
         
         private void MatchSize(RectTransform source, RectTransform destination)
@@ -78,7 +79,7 @@ namespace Bubbles.Graphics
             Vector2 mousePosition;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 _canvas.transform as RectTransform, // The RectTransform of the Canvas
-                Input.mousePosition - offset3,               // The current mouse position
+                Input.mousePosition,               // The current mouse position
                 _canvas.worldCamera,                // Camera rendering the Canvas (null if Overlay)
                 out mousePosition                  // The converted local position
             );

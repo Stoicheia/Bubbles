@@ -1603,7 +1603,7 @@ MonoBehaviour:
       Entry: 6
       Data: 
   _sceneManager: {fileID: 917386858}
-  _gapBetweenPopsSecs: 0.6
+  _gapBetweenPopsSecs: 0.4
 --- !u!1 &956706710
 GameObject:
   m_ObjectHideFlags: 0
@@ -2964,8 +2964,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvas: {fileID: 1808748193}
   _imageField: {fileID: 2095264245}
-  _collisionField: {fileID: 2108080428}
+  _collisionField: {fileID: 2095264244}
   _pickupDragHandler: {fileID: 246094496}
+  _universalScale: 0.7
 --- !u!1 &2108293618
 GameObject:
   m_ObjectHideFlags: 0
