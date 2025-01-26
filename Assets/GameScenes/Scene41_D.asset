@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Scene41_D
   m_EditorClassIdentifier: 
   PrincessBubble:
-    PickupSprite: {fileID: 0}
+    PickupSprite: {fileID: 21300000, guid: 5e9d0609b4b786d4f8e9af4dcec0910b, type: 3}
     ExtraSprites:
     - {fileID: 21300000, guid: 803a6bbd1a8d189479e8435497726b93, type: 3}
     - {fileID: 21300000, guid: 49e880a705d20164c8b55be6d179f35c, type: 3}

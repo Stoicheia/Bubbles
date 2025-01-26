@@ -29,6 +29,6 @@ MonoBehaviour:
     Expression: {fileID: 21300000, guid: 0f8addf5ef75e394ca8d07123c8cad09, type: 3}
   DragonCharacter:
     Base: {fileID: 0}
-    Expression: {fileID: 21300000, guid: a94f194b2a9c7084ab8f0f5ba0009141, type: 3}
+    Expression: {fileID: 21300000, guid: 461497378c7deab43883ed9fb87bae5a, type: 3}
   Environment:
-    Item: {fileID: 21300000, guid: 49e880a705d20164c8b55be6d179f35c, type: 3}
+    Item: {fileID: 21300000, guid: 5e9d0609b4b786d4f8e9af4dcec0910b, type: 3}

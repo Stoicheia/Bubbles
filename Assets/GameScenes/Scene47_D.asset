@@ -19,7 +19,7 @@ MonoBehaviour:
     PickupSprite: {fileID: 0}
     ExtraSprites: []
   DragonBubble:
-    PickupSprite: {fileID: 0}
+    PickupSprite: {fileID: 21300000, guid: 5e9d0609b4b786d4f8e9af4dcec0910b, type: 3}
     ExtraSprites:
     - {fileID: 21300000, guid: 56bc18c02095ba54e988b810bb3badcd, type: 3}
     - {fileID: 21300000, guid: 20ca79959feb3c040ba925c5766df12d, type: 3}
