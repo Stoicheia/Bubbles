@@ -8,6 +8,8 @@ namespace Bubbles.InteractableInput
 {
     public class DragInteractionHandler : MonoBehaviour
     {
+        public event Action<PanelPickup> OnHoverPickup;
+        public event Action<Panel> OnHoverPanel;
         public event Action<PanelPickup, Vector2> OnStartPickup;
         public event Action<PanelPickup> OnEndPickup;
         
@@ -49,6 +51,22 @@ namespace Bubbles.InteractableInput
                     if (pickupDetected != null)
                     {
                         pickupDetected.Hover();
+                        OnHoverPickup?.Invoke(pickupDetected);
+                    }
+                }
+            }
+            
+            if (!_gameSceneManager.IsLocked)
+            {
+                if (interactableDetected != PanelUnderMouse)
+                {
+                    if (PanelUnderMouse != null)
+                    {
+                    }
+
+                    if (interactableDetected != null)
+                    {
+                        OnHoverPanel?.Invoke(interactableDetected);
                     }
                 }
             }

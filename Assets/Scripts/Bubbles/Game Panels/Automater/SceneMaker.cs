@@ -1,4 +1,5 @@
 ﻿using Sirenix.OdinInspector;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Bubbles.GamePanels.Automater
@@ -12,6 +13,14 @@ namespace Bubbles.GamePanels.Automater
         [SerializeField] private CharacterMaker _knightCharacter;
         [SerializeField] private CharacterMaker _dragonCharacter;
         [SerializeField] private EnvironmentMaker _itemOnGround;
+
+        [Button]
+        public void Associate()
+        {
+            GameScene scene = GetComponent<GameScene>();
+            var prefabs = scene.PanelPrefabs;
+            _princessBubble = prefabs[SlotID.Bubble1].GetOrAddComponent<BubbleMaker>();
+        }
 
         [Button(ButtonSizes.Large)]
         public void CreateScene(SceneDefinition scene)

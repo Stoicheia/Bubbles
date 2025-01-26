@@ -18,13 +18,19 @@ namespace Bubbles.GamePanels
                 return _panels;
             }
         }
+
+        public List<SceneTransition> Transitions
+        {
+            get => _transitions;
+            set => _transitions = value;
+        }
         
         private Dictionary<SlotID, Panel> _panels;
 
         [SerializeField] private List<SlotData> _slotData;
         [SerializeField] private List<SceneTransition> _transitions;
-        [field: SerializeField] public bool IsEndingScene { get; private set; }
-        [field: SerializeField] [field: ShowIf("IsEndingScene")] public int Ending { get; private set; }
+        [field: SerializeField] public bool IsEndingScene { get; set; }
+        [field: SerializeField] [field: ShowIf("IsEndingScene")] public int Ending { get; set; }
         
         private Dictionary<SceneInteraction, GameScene> _sceneByInteraction;
 
@@ -65,6 +71,12 @@ namespace Bubbles.GamePanels
     {
         public SceneInteraction Interaction;
         public GameScene ToScene;
+
+        public SceneTransition(SlotID from, SlotID to, GameScene toScene)
+        {
+            Interaction = new SceneInteraction(from, to);
+            ToScene = toScene;
+        }
     }
 
     [Serializable]

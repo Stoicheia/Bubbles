@@ -13,6 +13,8 @@ namespace Bubbles.Graphics.Transitions
 {
     public class GameSceneTransitionAnims : SerializedMonoBehaviour
     {
+        public static event Action Pop;
+        
         [OdinSerialize][ReadOnly] private Dictionary<SlotID, PanelField> _panelFields;
         [SerializeField] private GameSceneManager _sceneManager;
         [SerializeField] private EndingTransitioner _endingTransitioner;
@@ -49,6 +51,7 @@ namespace Bubbles.Graphics.Transitions
                 PanelPopTransition anim = field.GetComponent<PanelPopTransition>();
                 anim.DisappearImmediately();
                 seqs.Add(StartCoroutine(anim.TransitionInSeq(_easeIn, _easeOut, _duration)));
+                Pop?.Invoke();
             }
             yield return new WaitForSeconds(_gapBetweenPopsSecs);
 
@@ -64,6 +67,7 @@ namespace Bubbles.Graphics.Transitions
                     PanelPopTransition anim = field.GetComponent<PanelPopTransition>();
                     anim.DisappearImmediately();
                     StartCoroutine(anim.TransitionInSeq(_easeIn, _easeOut, _duration));
+                    Pop?.Invoke();
                     yield return new WaitForSeconds(_gapBetweenPopsSecs);
                 }
             }

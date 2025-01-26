@@ -9,6 +9,8 @@ namespace Bubbles.InteractableInput
 {
     public class InteractionManager : MonoBehaviour
     {
+        public static event Action<SceneInteraction, bool> OnInteract;
+        
         [Header("Dependencies")]
         [SerializeField] private DragInteractionHandler _dragHandler;
         [FormerlySerializedAs("_sceneManager")] [SerializeField] private GameSceneManager _gameSceneManager;
@@ -111,7 +113,8 @@ namespace Bubbles.InteractableInput
             Panel panelUnderMouse = _dragHandler.PanelUnderMouse;
             if (panelUnderMouse == null) return;
             SceneInteraction interaction = new SceneInteraction(pickup.ParentID, panelUnderMouse.ID);
-            _gameSceneManager.TryInteraction(interaction);
+            bool success = _gameSceneManager.TryInteraction(interaction);
+            OnInteract?.Invoke(interaction, success);
         }
         
         
