@@ -16,6 +16,7 @@ namespace Bubbles.InteractableInput
         public PanelPickup CurrentlyDragging { get; private set; }
         [SerializeField] private Canvas _canvas;
         [SerializeField] private PickupInTransit _transitor;
+        [SerializeField] private GameSceneManager _gameSceneManager;
 
         private void OnEnable()
         {
@@ -32,10 +33,11 @@ namespace Bubbles.InteractableInput
         
         private void Update()
         {
+            if (_gameSceneManager.IsLocked) return;
             var interactableDetected = CanvasUtility.DetectUnderCursor<Panel>();
             var pickupDetected = CanvasUtility.DetectUnderCursor<PanelPickup>();
 
-            if (CurrentlyDragging == null)
+            if (CurrentlyDragging == null && !_gameSceneManager.IsLocked)
             {
                 if (pickupDetected != PickupUnderMouse)
                 {
@@ -54,7 +56,7 @@ namespace Bubbles.InteractableInput
             PanelUnderMouse = interactableDetected;
             PickupUnderMouse = pickupDetected;
 
-            if (CurrentlyDragging == null)
+            if (CurrentlyDragging == null && !_gameSceneManager.IsLocked)
             {
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -76,12 +78,14 @@ namespace Bubbles.InteractableInput
                 
         private void HandleStartPickup(PanelPickup pickup, Vector2 startPos)
         {
+            if (_gameSceneManager.IsLocked) return;
             CurrentlyDragging = pickup;
             OnStartPickup?.Invoke(pickup, startPos);
         }
         
         private void HandleEndPickup(PanelPickup pickup)
         {
+            if (_gameSceneManager.IsLocked) return;
             CurrentlyDragging = null;
             OnEndPickup?.Invoke(pickup);
         }

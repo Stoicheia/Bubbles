@@ -10,30 +10,24 @@ namespace Bubbles.Graphics.Transitions
     {
         [Header("Dependencies")]
         [SerializeField] private PanelField _panelField;
-        
-        [Header("Settings")]
-        [SerializeField] private Ease _easeIn;
-        [SerializeField] private Ease _easeOut;
-        [SerializeField] private float _duration;
-
         private void Start()
         {
             _panelField = GetComponent<PanelField>();
         }
 
-        public override IEnumerator TransitionInSeq()
+        public override IEnumerator TransitionInSeq(Ease easeIn, Ease easeOut, float duration)
         {
             var pTransform = _panelField.transform;
             pTransform.localScale = Vector3.zero;
-            Tween scaleIn = pTransform.DOScale(1, _duration).SetEase(_easeIn);
+            Tween scaleIn = pTransform.DOScale(1, duration).SetEase(easeIn);
             yield return scaleIn.WaitForCompletion();
         }
 
-        public override IEnumerator TransitionOutSeq()
+        public override IEnumerator TransitionOutSeq(Ease easeIn, Ease easeOut, float duration)
         {
             var pTransform = _panelField.transform;
             pTransform.localScale = Vector3.one;
-            Tween scaleIn = pTransform.DOScale(0, _duration).SetEase(_easeOut);
+            Tween scaleIn = pTransform.DOScale(0, duration).SetEase(easeOut);
             yield return scaleIn.WaitForCompletion();
         }
         

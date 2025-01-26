@@ -529,6 +529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvas: {fileID: 1808748193}
   _transitor: {fileID: 2108080429}
+  _gameSceneManager: {fileID: 917386858}
 --- !u!4 &246094497
 Transform:
   m_ObjectHideFlags: 0
@@ -739,9 +740,6 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _panelField: {fileID: 0}
-  _easeIn: 30
-  _easeOut: 30
-  _duration: 1.1
 --- !u!1 &341047476
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,9 +889,6 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _panelField: {fileID: 400799086}
-  _easeIn: 30
-  _easeOut: 30
-  _duration: 1.1
 --- !u!1 &471235388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,9 +1735,6 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _panelField: {fileID: 0}
-  _easeIn: 30
-  _easeOut: 30
-  _duration: 1.1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,9 +1893,6 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _panelField: {fileID: 0}
-  _easeIn: 30
-  _easeOut: 30
-  _duration: 1.1
 --- !u!1 &899450960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,7 +2171,10 @@ MonoBehaviour:
       Data: 
   _sceneManager: {fileID: 917386858}
   _endingTransitioner: {fileID: 917386861}
-  _gapBetweenPopsSecs: 0.4
+  _gapBetweenPopsSecs: 1.1
+  _easeIn: 30
+  _easeOut: 30
+  _duration: 1.6
 --- !u!114 &917386861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2200,7 +2192,7 @@ MonoBehaviour:
   _endingPanel: {fileID: 1462193956}
   _endingRepo: {fileID: 11400000, guid: 7a1309006825cb34eb4f18e09992c5f4, type: 2}
   <WaitBefore>k__BackingField: 1
-  _halfDuration: 1.5
+  _halfDuration: 1.6
   _waitDuration: 0.01
   _easeIn: 5
   _easeOut: 6
@@ -2676,9 +2668,6 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _panelField: {fileID: 0}
-  _easeIn: 30
-  _easeOut: 30
-  _duration: 1.1
 --- !u!1 &1350520993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,9 +2995,6 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _panelField: {fileID: 1564927635}
-  _easeIn: 30
-  _easeOut: 30
-  _duration: 1.1
 --- !u!224 &1755327915 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7515618135440053041, guid: 0b244a8d88fa16342a8fb12e4f99f750, type: 3}
@@ -3343,9 +3329,6 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _panelField: {fileID: 0}
-  _easeIn: 30
-  _easeOut: 30
-  _duration: 1.1
 --- !u!1 &2063351193
 GameObject:
   m_ObjectHideFlags: 0

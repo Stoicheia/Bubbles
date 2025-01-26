@@ -14,6 +14,7 @@ namespace Bubbles.GamePanels.Automater
         {
             _itemField.sprite = data.Item;
             _pickupField.gameObject.SetActive(data.Item != null);
+            _pickupField._overrideSpriteInTransit = null;
         }
     }
 }

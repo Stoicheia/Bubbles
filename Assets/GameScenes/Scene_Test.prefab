@@ -182,6 +182,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 7552519706305971240}
     m_Modifications:
     - target: {fileID: 3777908642140794571, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
+      propertyPath: _overrideSpriteInTransit
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3777908642140794571, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 3777908642140794571, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}

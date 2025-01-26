@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Bubbles.Graphics;
 using Bubbles.InteractableInput;
 using Sirenix.OdinInspector;
@@ -20,6 +21,7 @@ namespace Bubbles.GamePanels
         [SerializeField] private Image _toHighlight;
         [SerializeField] private PanelPickup _pickup;
         [SerializeField] private List<PanelPickup> _additionalPickups;
+        private List<string> _principalSprites => GetComponentsInChildren<Image>().Where(x => x.sprite != null).Select(x => x.sprite.name).ToList();
 
         [Header("Graphics Settings")] 
         [SerializeField] private PanelHighlight _panelHighlight;
@@ -45,6 +47,11 @@ namespace Bubbles.GamePanels
         public void SetHighlight(HighlightState highlight)
         {
             _panelHighlight.SetHighlightState(highlight);
+        }
+
+        public bool IsSameAs(Panel other)
+        {
+            return other._principalSprites.All(_principalSprites.Contains) && _principalSprites.All(other._principalSprites.Contains);
         }
     }
 }

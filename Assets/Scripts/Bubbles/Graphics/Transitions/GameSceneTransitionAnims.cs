@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Bubbles.GamePanels;
+using DG.Tweening;
 using Ending;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -18,6 +19,9 @@ namespace Bubbles.Graphics.Transitions
 
         [Header("Settings")]
         [SerializeField] private float _gapBetweenPopsSecs;
+        [SerializeField] private Ease _easeIn;
+        [SerializeField] private Ease _easeOut;
+        [SerializeField] private float _duration;
 
         private void Start()
         {
@@ -44,18 +48,24 @@ namespace Bubbles.Graphics.Transitions
                 PanelField field = _sceneManager.LoadScenePanel(toScene, id);
                 PanelPopTransition anim = field.GetComponent<PanelPopTransition>();
                 anim.DisappearImmediately();
-                seqs.Add(StartCoroutine(anim.TransitionInSeq()));
+                seqs.Add(StartCoroutine(anim.TransitionInSeq(_easeIn, _easeOut, _duration)));
             }
             yield return new WaitForSeconds(_gapBetweenPopsSecs);
 
             foreach (SlotID id in _naturalOrder)
             {
                 if (involvedIDs.Contains(id)) continue;
+                Panel oldPanel = _sceneManager.PanelFields[id].ActivePanelInstance;
                 PanelField field = _sceneManager.LoadScenePanel(toScene, id);
-                PanelPopTransition anim = field.GetComponent<PanelPopTransition>();
-                anim.DisappearImmediately();
-                StartCoroutine(anim.TransitionInSeq());
-                yield return new WaitForSeconds(_gapBetweenPopsSecs);
+                Panel newPanel = _sceneManager.PanelFields[id].ActivePanelInstance;
+                bool samePanelKinda = oldPanel.IsSameAs(newPanel);
+                if (!samePanelKinda)
+                {
+                    PanelPopTransition anim = field.GetComponent<PanelPopTransition>();
+                    anim.DisappearImmediately();
+                    StartCoroutine(anim.TransitionInSeq(_easeIn, _easeOut, _duration));
+                    yield return new WaitForSeconds(_gapBetweenPopsSecs);
+                }
             }
             _sceneManager.SetActiveScene(toScene);
             if (toScene.IsEndingScene)

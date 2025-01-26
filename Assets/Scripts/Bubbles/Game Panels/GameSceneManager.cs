@@ -19,6 +19,8 @@ namespace Bubbles.GamePanels
             get => _activeScenePrefab;
             set => _activeScenePrefab = value;
         }
+
+        public bool IsLocked => _isLocked;
         public Dictionary<SlotID, PanelField> PanelFields => _panelFields;
 
         [OdinSerialize] private Dictionary<SlotID, PanelField> _panelFields;

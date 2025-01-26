@@ -17,7 +17,7 @@ namespace Bubbles.GamePanels
         public SlotID ParentID => ParentPanel.ID;
         [SerializeField] private PickupGraphics _graphics;
         public Sprite SpriteInTransit => _overrideSpriteInTransit == null ? _graphics.Sprite : _overrideSpriteInTransit;
-        [SerializeField] private Sprite _overrideSpriteInTransit;
+        [SerializeField] public Sprite _overrideSpriteInTransit;
         [SerializeField] private float _transitScale = 0.8f;
         private PickupState _state;
         private Vector2 _dragStartPos;
