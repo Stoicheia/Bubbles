@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      try again on hover_0: -1321719469419726971
+      try again on hover_1: -2475076891865333327
+      try again on hover_2: -6491074456475733088
+      try again on hover_3: 575695311275220207
+      try again on hover_4: 7021093853445603432
+      try again on hover_5: -7368800861409800195
+      try again on hover_6: -4158634107783179860
+      try again on hover_7: -7526607047144216974
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

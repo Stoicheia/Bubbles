@@ -19,6 +19,7 @@ namespace Bubbles.Graphics.Transitions
         [OdinSerialize][ReadOnly] private Dictionary<SlotID, PanelField> _panelFields;
         [SerializeField] private GameSceneManager _sceneManager;
         [SerializeField] private EndingTransitioner _endingTransitioner;
+        [SerializeField] private RectTransform _overlay;
 
         [Header("Settings")]
         [SerializeField] private float _gapBetweenPopsSecs;
@@ -53,7 +54,10 @@ namespace Bubbles.Graphics.Transitions
             {
                 int endingNumber = toScene.Ending;
                 yield return _endingTransitioner.TransitionToEnding(endingNumber);
+                yield break;
             }
+
+            _overlay.gameObject.SetActive(true);
             
             HashSet<SlotID> involvedIDs = new HashSet<SlotID>() {fromInteraction.From, fromInteraction.To};
             HashSet<PanelField> involvedPanels = involvedIDs.Select(x => _panelFields[x]).ToHashSet();
@@ -102,6 +106,7 @@ namespace Bubbles.Graphics.Transitions
             }
             else
             {
+                _overlay.gameObject.SetActive(false);
                 _sceneManager.SetLock(false);
             }
         }

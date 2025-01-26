@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      scroll-transparent-png-13_0: -911893145452956117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
