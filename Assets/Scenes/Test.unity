@@ -2995,9 +2995,6 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _panelField: {fileID: 1564927635}
-  _easeIn: 30
-  _easeOut: 30
-  _duration: 1.1
 --- !u!224 &1685420617 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 581842640256587320, guid: ce3ac5b5328162a4a9da6b3d493037ba, type: 3}
