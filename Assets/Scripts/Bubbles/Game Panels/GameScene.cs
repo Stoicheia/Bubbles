@@ -24,7 +24,7 @@ namespace Bubbles.GamePanels
         [SerializeField] private List<SlotData> _slotData;
         [SerializeField] private List<SceneTransition> _transitions;
         [field: SerializeField] public bool IsEndingScene { get; private set; }
-        [field: SerializeField] [field: ShowIf("IsEndingScene")] public Endings Ending { get; private set; }
+        [field: SerializeField] [field: ShowIf("IsEndingScene")] public int Ending { get; private set; }
         
         private Dictionary<SceneInteraction, GameScene> _sceneByInteraction;
 

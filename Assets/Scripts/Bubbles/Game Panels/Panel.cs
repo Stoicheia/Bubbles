@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using Bubbles.Graphics;
 using Bubbles.InteractableInput;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,13 +12,14 @@ namespace Bubbles.GamePanels
     [RequireComponent(typeof(Image))]
     public class Panel : MonoBehaviour, IMouseInteractor
     {
-        [field: SerializeField] public SlotID ID { get; set; }
-        [SerializeField] private bool _isLocked;
+        [field: SerializeField][field: HideInInspector] public SlotID ID { get; set; }
+        [SerializeField][HideInInspector] private bool _isLocked;
         
         [Header("Dependencies")]
         [SerializeField] private RectTransform _background;
         [SerializeField] private Image _toHighlight;
         [SerializeField] private PanelPickup _pickup;
+        [SerializeField] private List<PanelPickup> _additionalPickups;
 
         [Header("Graphics Settings")] 
         [SerializeField] private PanelHighlight _panelHighlight;
@@ -26,6 +29,7 @@ namespace Bubbles.GamePanels
         {
             GetComponent<Image>().color = Color.clear;
             _pickup.ParentPanel = this;
+            _additionalPickups.ForEach(x => x.ParentPanel = this);
             PanelField parentField = GetComponentInParent<PanelField>();
             if (parentField != null)
             {

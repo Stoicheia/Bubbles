@@ -78,7 +78,7 @@ namespace Bubbles.GamePanels
             _activeScenePrefab = scene;
             if (scene.IsEndingScene)
             {
-                Debug.Log($"Ending {scene.Ending.number} reached.");
+                Debug.Log($"Ending {scene.Ending} reached.");
             }
         }
 
@@ -102,7 +102,7 @@ namespace Bubbles.GamePanels
             ActiveScene = scene;
             if (scene.IsEndingScene)
             {
-                Debug.Log($"Ending {scene.Ending.number} reached.");
+                Debug.Log($"Ending {scene.Ending} reached.");
             }
         }
 
