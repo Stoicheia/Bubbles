@@ -16,7 +16,7 @@ MonoBehaviour:
     PickupSprite: {fileID: 0}
     ExtraSprites: []
   KnightBubble:
-    PickupSprite: {fileID: 0}
+    PickupSprite: {fileID: 21300000, guid: 5e9d0609b4b786d4f8e9af4dcec0910b, type: 3}
     ExtraSprites:
     - {fileID: 21300000, guid: 2c93f50dad73aa84caa1bf6a2e7c617e, type: 3}
     - {fileID: 21300000, guid: 32e221a133e055c4fb0aa4ea69eda5ea, type: 3}

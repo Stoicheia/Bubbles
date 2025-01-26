@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f61c613cf0c4b3682b11fd427534c49, type: 3}
+  m_Name: Ending 33
+  m_EditorClassIdentifier: 
+  Number: 33
+  Graphic: {fileID: 21300000, guid: 4fdeb6e4cb32fbe4f866342d52080e95, type: 3}
+  Text: You discovered an ending!
+  IsComplete: 0
