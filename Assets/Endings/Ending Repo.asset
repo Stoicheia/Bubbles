@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5837e66cdb4746bfb6c68bfc44c76911, type: 3}
+  m_Name: Ending Repo
+  m_EditorClassIdentifier: 
+  Endings:
+  - {fileID: 11400000, guid: 7b3bfe0015b68134dbd25cb6d2933250, type: 2}
+  - {fileID: 11400000, guid: b5e57b26e7d89c943ac8e6919e092ae0, type: 2}
+  - {fileID: 11400000, guid: ce628e8ea7561b74b9976f328b65c1c4, type: 2}

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Bubbles.GamePanels;
+using Ending;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -13,6 +14,8 @@ namespace Bubbles.Graphics.Transitions
     {
         [OdinSerialize][ReadOnly] private Dictionary<SlotID, PanelField> _panelFields;
         [SerializeField] private GameSceneManager _sceneManager;
+        [SerializeField] private EndingTransitioner _endingTransitioner;
+
         [Header("Settings")]
         [SerializeField] private float _gapBetweenPopsSecs;
 
@@ -55,7 +58,16 @@ namespace Bubbles.Graphics.Transitions
                 yield return new WaitForSeconds(_gapBetweenPopsSecs);
             }
             _sceneManager.SetActiveScene(toScene);
-            _sceneManager.SetLock(false);
+            if (toScene.IsEndingScene)
+            {
+                yield return new WaitForSeconds(_endingTransitioner.WaitBefore);
+                int endingNumber = toScene.Ending;
+                yield return _endingTransitioner.TransitionToEnding(endingNumber);
+            }
+            else
+            {
+                _sceneManager.SetLock(false);
+            }
         }
     }
 }

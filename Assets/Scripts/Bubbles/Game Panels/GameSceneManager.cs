@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Bubbles.Graphics.Transitions;
+using Ending;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
