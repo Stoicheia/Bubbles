@@ -67,6 +67,18 @@ namespace Audio
 
         private void Awake()
         {
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(this);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            _musicSource.clip = _mainMusic;
+            _musicSource.Play();
+            
             _princessExpressions = new List<ExpressionAudio>(){_blushingP, _confidentP, _curiousP, _happyP, _sadP, _scaredP, _sleepingP};
             _knightExpressions = new List<ExpressionAudio>(){_blushingK, _confusedK, _deadK, _happyK, _heroicK, _jealousK, _undeadK, _worriedK};
             _dragonExpressions = new List<ExpressionAudio>(){_blushingD, _dieD, _rampageD, _happyD, _sadD, _sleepD, _confusedD};
@@ -79,15 +91,6 @@ namespace Audio
             _dragger.OnStartPickup += HandleStartPickup;
             InteractionManager.OnInteract += HandleInteract;
             GameSceneTransitionAnims.OnPop += HandlePop;
-        }
-        
-        private void OnDisable()
-        {
-            _dragger.OnHoverPanel -= HandleHoverPanel;
-            _dragger.OnHoverPickup -= HandleHoverPickup;
-            _dragger.OnStartPickup -= HandleStartPickup;
-            InteractionManager.OnInteract -= HandleInteract;
-            GameSceneTransitionAnims.OnPop -= HandlePop;
         }
 
         private void HandlePop(SlotID slotID, Panel panel)
