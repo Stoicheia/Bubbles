@@ -31,4 +31,4 @@ MonoBehaviour:
     Base: {fileID: 0}
     Expression: {fileID: 21300000, guid: 37b519a1576520a4fae768db6869370d, type: 3}
   Environment:
-    Item: {fileID: 0}
+    Item: {fileID: 21300000, guid: 388e45f83d6061642b03f48ac344ac92, type: 3}

@@ -2497,7 +2497,7 @@ MonoBehaviour:
   _activeScenePrefab: {fileID: 0}
   _isLocked: 0
   _anims: {fileID: 917386860}
-  _loadOnStart: {fileID: 7867927460315108408, guid: 80edbe567c771984d892cad863008069, type: 3}
+  _loadOnStart: {fileID: 7867927460315108408, guid: ad277a4e677c6e548a1c6d3239bea81d, type: 3}
 --- !u!4 &917386859
 Transform:
   m_ObjectHideFlags: 0
