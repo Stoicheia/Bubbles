@@ -42,6 +42,13 @@ namespace Bubbles.Graphics.Transitions
         private IEnumerator ChainTransition(SceneInteraction fromInteraction, GameScene toScene)
         {
             _sceneManager.SetLock(true);
+            
+            if (toScene.IsEndingScene)
+            {
+                int endingNumber = toScene.Ending;
+                yield return _endingTransitioner.TransitionToEnding(endingNumber);
+            }
+            
             HashSet<SlotID> involvedIDs = new HashSet<SlotID>() {fromInteraction.From, fromInteraction.To};
             HashSet<PanelField> involvedPanels = involvedIDs.Select(x => _panelFields[x]).ToHashSet();
             var seqs = new List<Coroutine>();
