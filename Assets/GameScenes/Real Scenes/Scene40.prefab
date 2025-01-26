@@ -76,15 +76,15 @@ MonoBehaviour:
   - Interaction:
       From: 6
       To: 3
-    ToScene: {fileID: 7867927460315108408, guid: 12f2c93419184344e9a88a57132f9aff, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 5a93f0efcc4351f4b87dcccad6c9b693, type: 3}
   - Interaction:
       From: 6
       To: 4
-    ToScene: {fileID: 7867927460315108408, guid: 5d406383190286644acc67f57d6a5218, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: cf54878a0db224348abd19a87bfc4577, type: 3}
   - Interaction:
       From: 6
       To: 5
-    ToScene: {fileID: 7867927460315108408, guid: f30ba85bf8680404b9dc99aa976933bc, type: 3}
+    ToScene: {fileID: 7867927460315108408, guid: 992e524481d2f4b4f97f6ef6c32ea5ae, type: 3}
   <IsEndingScene>k__BackingField: 0
   <Ending>k__BackingField: 0
 --- !u!114 &5533724558582664186
@@ -220,11 +220,11 @@ PrefabInstance:
     - target: {fileID: 4217754147777489972, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 49e880a705d20164c8b55be6d179f35c, type: 3}
+      objectReference: {fileID: 21300000, guid: 5e9d0609b4b786d4f8e9af4dcec0910b, type: 3}
     - target: {fileID: 4857960548572333056, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 49e880a705d20164c8b55be6d179f35c, type: 3}
+      objectReference: {fileID: 21300000, guid: 5e9d0609b4b786d4f8e9af4dcec0910b, type: 3}
     - target: {fileID: 5470748935303212495, guid: d7e6fa507a216bb4985bca60ed110f28, type: 3}
       propertyPath: _background
       value: 
@@ -1156,7 +1156,7 @@ PrefabInstance:
     - target: {fileID: 7417527824252152566, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a94f194b2a9c7084ab8f0f5ba0009141, type: 3}
+      objectReference: {fileID: 21300000, guid: 461497378c7deab43883ed9fb87bae5a, type: 3}
     - target: {fileID: 8443906342785952568, guid: 42f938b79f1f203449d598c6fc57db77, type: 3}
       propertyPath: serializationData.Prefab
       value: 
